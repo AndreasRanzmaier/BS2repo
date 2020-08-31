@@ -6,7 +6,13 @@ namespace _2stillClasses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Auto BMW = new Auto();
+            BMW.Baujahr = 1997;
+            BMW.PS = 200;
+            BMW.Farbe = "Schwarzer";
+            
+            BMW.getInfo();
+
         }
     }
 }
