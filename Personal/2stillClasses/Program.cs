@@ -10,6 +10,7 @@ namespace _2stillClasses
             BMW.Baujahr = 1997;
             BMW.PS = 200;
             BMW.Farbe = "Schwarzer";
+            BMW.MotorAn = true;
             
             BMW.getInfo();
 
