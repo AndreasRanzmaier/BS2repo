@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace _2stillClasses
 {
@@ -12,7 +13,18 @@ namespace _2stillClasses
             BMW.Farbe = "Schwarzer";
             BMW.MotorAn = true;
             
-            BMW.getInfo();
+            //BMW.getInfo();
+
+
+            Buch lotr = new Buch("lotr", 400);
+            //Console.WriteLine(lotr.Seiten);
+
+            float ergebniss = Math.div((float)400.0, 4);
+            // Console.WriteLine(ergebniss);
+
+            Hund Bello = new Hund();
+
+            Bello.bellen();
 
         }
     }

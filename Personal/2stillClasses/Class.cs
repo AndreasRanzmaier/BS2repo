@@ -31,3 +31,25 @@ public class Auto
         Console.WriteLine(Farbe + " Bmw " + PS + " PS (" + Baujahr +")");
     }
 }
+
+
+class Tier
+{
+    public string Geschlecht { get; set; }
+
+    public void Bewegen()
+    {
+        //Bewegen
+        Console.WriteLine("move");
+    }
+}
+
+class Hund : Tier
+{
+    public string Name { get; set; }
+
+    public void bellen()
+    {
+        Console.WriteLine("wuff");
+    }
+}
