@@ -75,7 +75,7 @@ namespace _3SudokuSolver
 
             bool Possible(int Row, int Collumn, int tryNumber)
             {
-                //cant put a number somwhere if there allready is one
+                //cant put a number somewhere if there already is one
                 if (namenListe[Row, Collumn] == 0)
                 {
                     //find all the row numbers
