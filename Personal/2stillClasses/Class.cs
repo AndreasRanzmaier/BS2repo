@@ -2,17 +2,17 @@
 
 public class Auto
 {
-	//Variablen immer klein schreiben
-	private bool motorAn;
+    //Variablen immer klein schreiben
+    private bool motorAn;
 
-	//Eingenschaften immer groß schreiben 
-	public string Farbe { get; set; }
-	public int PS { get; set; }
-	public int Baujahr { get; set; }
+    //Eingenschaften immer groß schreiben 
+    public string Farbe { get; set; }
+    public int PS { get; set; }
+    public int Baujahr { get; set; }
 
 
-	//selber get und set zugriff machen also private variable zu einer Eigenschaft machen  
-	public bool MotorAn
+    //selber get und set zugriff machen also private variable zu einer Eigenschaft machen  
+    public bool MotorAn
     {
         get
         {
@@ -26,12 +26,11 @@ public class Auto
         }
     }
 
-	public void getInfo()
+    public void getInfo()
     {
-        Console.WriteLine(Farbe + " Bmw " + PS + " PS (" + Baujahr +")");
+        Console.WriteLine(Farbe + " Bmw " + PS + " PS (" + Baujahr + ")");
     }
 }
-
 
 class Tier
 {
