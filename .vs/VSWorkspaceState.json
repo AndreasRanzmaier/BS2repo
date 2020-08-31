@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Personal"
+    "\\Personal",
+    "\\Personal\\2stillClasses",
+    "\\Personal\\3SudokuSolver"
   ],
-  "SelectedNode": "\\Personal",
+  "SelectedNode": "\\Personal\\3SudokuSolver\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
