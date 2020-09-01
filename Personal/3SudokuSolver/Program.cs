@@ -50,51 +50,77 @@ namespace _3SudokuSolver
 
             display(SudokuFeld);
 
-            
+
             Console.ReadKey();
 
 
             //reccursive backtracking to solve 
             void solve()
             {
-                //von 00 
+                //von [0,0] 
                 for (int i = 0; i < row1; i++)
                 {
-                    //bis 88
+                    //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
-                        //für alle möglichen zahlen
-                        for (int n = 1; n < 10; n++)
-                        {                            
-                            if (Possible(i, j, n)) //possible auch falsch wenn schon eine Zahl vorhanden
+                        if (SudokuFeld[i, j] == 0)
+                        {
+                            //für alle möglichen zahlen 1-9
+                            for (int n = 1; n < 10; n++)
                             {
-                                // ist möglich kann aber falsch sein 
-                                SudokuFeld[i, j] = n;
-                                solve();                                
-                            }                            
-                        }                      
+                                if (Possible(i, j, n)) 
+                                {
+                                    // ist möglich kann aber falsch sein 
+                                    SudokuFeld[i, j] = n; //one free square less
+
+
+                                    //ausrechnen ob alle felder richtig belegt sind 
+                                    int full = 0;
+                                    for (int x = 0; x < row1; x++)
+                                    {
+                                        for (int y = 0; y < collumn1; y++)
+                                        {
+                                            full = full + SudokuFeld[x, y];
+                                        }
+                                    }
+
+                                    solve();
+                                
+
+                                    if (full == 405)
+                                    {
+                                        return;
+                                    }
+
+                                    SudokuFeld[i, j] = 0;
+
+                                }                          
+                            }
+                            return;
+                        }
+                        
                     }
                 }
-                
-            }            
+
+            }
 
             //disply the grid
             void display(int[,] Feld)
             {
                 int t = 1;
 
-                for (int i = 0; i <  row1; i++)
+                for (int i = 0; i < row1; i++)
                 {
                     for (int j = 0; j < collumn1; j++)
                     {
-                        if (((t-1) % 3 == 0))
+                        if (((t - 1) % 3 == 0))
                         {
                             Console.Write(" | ");
                         }
-                        Console.Write(Feld[i,j]);
+                        Console.Write(Feld[i, j]);
                         if (t % 9 == 0)
                         {
-                         
+
                             Console.Write("\n");
                         }
                         if (t % 27 == 0)
@@ -110,52 +136,43 @@ namespace _3SudokuSolver
             bool Possible(int Row, int Collumn, int tryNumber)
             {
                 //cant put a number somewhere if there already is one
-                if (SudokuFeld[Row, Collumn] == 0)
+
+                //find all the row numbers
+                for (int i = 0; i < row1; i++)
                 {
-                    //find all the row numbers
-                    for (int i = 0; i < row1; i++)
+                    if (SudokuFeld[i, Row] == tryNumber)
                     {
-                        if (SudokuFeld[i, Row] == tryNumber)
+                        return false;
+                    }
+                }
+
+                //find all the collumn numbers
+                for (int i = 0; i < collumn1; i++)
+                {
+                    if (SudokuFeld[Collumn, i] == tryNumber)
+                    {
+                        return false;
+                    }
+                }
+
+                //find all the numbers in same square 
+
+                int haus = determineHaus(Row, Collumn);
+                int minx = 0;
+                int miny = 0;
+
+                minxy(haus, out minx, out miny);
+
+                for (int x = minx; x < minx + 3; x++)
+                {
+                    for (int y = miny; y < miny + 3; y++)
+                    {
+                        if (SudokuFeld[x, y] == tryNumber)
                         {
                             return false;
                         }
                     }
-
-                    //find all the collumn numbers
-                    for (int i = 0; i < collumn1; i++)
-                    {
-                        if (SudokuFeld[Collumn, i] == tryNumber)
-                        {
-                            return false;
-                        }
-                    }
-
-                    //find all the numbers in same square 
-
-                    int haus = determineHaus(Row, Collumn);
-                    int minx = 0;
-                    int miny = 0;
-
-                    minxy(haus, out minx, out miny);
-
-
-                    for (int x = minx; x < minx + 3; x++)
-                    {
-                        for (int y = miny; y < miny + 3; y++)
-                        {
-                            if (SudokuFeld[x, y] == tryNumber)
-                            {
-                                return false;
-                            }
-                        }
-                    }
-
                 }
-                else
-                {                    
-                    return false;
-                }
-
                 return true;
             }
 
@@ -216,7 +233,7 @@ namespace _3SudokuSolver
                     return 0;
                 }
             }
-         
+
             //checks the haus and sends back its top left corner 
             static void minxy(int haus, out int minx, out int miny)
             {
