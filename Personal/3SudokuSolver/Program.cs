@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Runtime.Serialization.Formatters;
 
 namespace _3SudokuSolver
@@ -12,58 +13,84 @@ namespace _3SudokuSolver
         {
             int row1 = 9;
             int collumn1 = 9;
-            int[,] SudokuFeld = new int[row1, collumn1];
+            int[,] SudokuField = new int[row1, collumn1];
 
             //making one 
-            SudokuFeld[0, 0] = 5;
-            SudokuFeld[0, 1] = 3;
-            SudokuFeld[0, 4] = 7;
-            SudokuFeld[1, 0] = 6;
-            SudokuFeld[1, 3] = 1;
-            SudokuFeld[1, 4] = 9;
-            SudokuFeld[1, 5] = 5;
-            SudokuFeld[2, 1] = 9;
-            SudokuFeld[2, 2] = 8;
-            SudokuFeld[2, 7] = 6;
-            SudokuFeld[3, 0] = 8;
-            SudokuFeld[3, 4] = 6;
-            SudokuFeld[3, 8] = 3;
-            SudokuFeld[4, 0] = 4;
-            SudokuFeld[4, 3] = 8;
-            SudokuFeld[4, 5] = 3;
-            SudokuFeld[4, 8] = 1;
-            SudokuFeld[5, 0] = 7;
-            SudokuFeld[5, 4] = 2;
-            SudokuFeld[5, 8] = 6;
-            SudokuFeld[6, 1] = 6;
-            SudokuFeld[6, 6] = 2;
-            SudokuFeld[6, 7] = 8;
-            SudokuFeld[7, 3] = 4;
-            SudokuFeld[7, 4] = 1;
-            SudokuFeld[7, 5] = 9;
-            SudokuFeld[7, 8] = 5;
-            SudokuFeld[8, 4] = 8;
-            SudokuFeld[8, 7] = 7;
-            SudokuFeld[8, 8] = 9;
+            SudokuField[0, 0] = 5;
+            SudokuField[0, 1] = 3;
+            SudokuField[0, 4] = 7;
+            SudokuField[1, 0] = 6;
+            SudokuField[1, 3] = 1;
+            SudokuField[1, 4] = 9;
+            SudokuField[1, 5] = 5;
+            SudokuField[2, 1] = 9;
+            SudokuField[2, 2] = 8;
+            SudokuField[2, 7] = 6;
+            SudokuField[3, 0] = 8;
+            SudokuField[3, 4] = 6;
+            SudokuField[3, 8] = 3;
+            SudokuField[4, 0] = 4;
+            SudokuField[4, 3] = 8;
+            SudokuField[4, 5] = 3;
+            SudokuField[4, 8] = 1;
+            SudokuField[5, 0] = 7;
+            SudokuField[5, 4] = 2;
+            SudokuField[5, 8] = 6;
+            SudokuField[6, 1] = 6;
+            SudokuField[6, 6] = 2;
+            SudokuField[6, 7] = 8;
+            SudokuField[7, 3] = 4;
+            SudokuField[7, 4] = 1;
+            SudokuField[7, 5] = 9;
+            SudokuField[7, 8] = 5;
+            SudokuField[8, 4] = 8;
+            SudokuField[8, 7] = 7;
+            SudokuField[8, 8] = 9;
 
             int maxI = 0;
             int maxJ = 0;
             int maxFull = 0;
 
-            solve();
 
+            while (!isFull())
+            {
+             solve();
+            }
+            
+            display(SudokuField);
 
-            display(SudokuFeld);
+           // display(SudokuField);
 
 
             Console.ReadKey();
-
+            bool isFull ()
+            {
+                //ausrechnen ob alle felder richtig belegt sind 
+                int full = 0;
+                for (int x = 0; x < row1; x++)
+                {
+                    for (int y = 0; y < collumn1; y++)
+                    {
+                        full = full + SudokuField[x, y];
+                    }
+                }
+                //405 = Zahlensumme eines vollen Sudokus
+                if (full == 405)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
             //reccursive backtracking to solve 
             void solve()
             {
                 //von [0,0] 
                 for (int i = 0; i < row1; i++)
                 {
+                    //debug
                     if (i > maxI)
                     {
                         maxI = i;
@@ -72,44 +99,32 @@ namespace _3SudokuSolver
                     //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
-
+                        //debug
                         if (j > maxJ)
                         {
                             maxJ = j;
                         }
 
-                        if (SudokuFeld[i, j] == 0)
+                        if (SudokuField[i, j] == 0)
                         {
                             //für alle möglichen zahlen 1-9
                             for (int n = 1; n < 10; n++)
                             {
                                 if (Possible(i, j, n)) 
                                 {
-                                    // ist möglich kann aber falsch sein 
-                                    SudokuFeld[i, j] = n; //one free square less
-
+                                    //ist möglich kann aber falsch sein 
+                                    SudokuField[i, j] = n;//one free square less                                        
                                     solve();
 
-                                    //ausrechnen ob alle felder richtig belegt sind 
-                                    int full = 0;
-                                    for (int x = 0; x < row1; x++)
-                                    {
-                                        for (int y = 0; y < collumn1; y++)
-                                        {
-                                            full = full + SudokuFeld[x, y];
-                                        }
-                                    }
-
-                                    if (full > maxFull)
-                                        maxFull = full;
-
-                                    if (full == 405)
+                                    if (isFull())
                                     {
                                         return;
                                     }
-
-                                    SudokuFeld[i, j] = 0;
-
+                                    
+                                        SudokuField[i, j] = 0;
+                                        return;
+                                    
+                                   
                                 }                          
                             }
                             return;
@@ -124,6 +139,8 @@ namespace _3SudokuSolver
             //disply the grid
             void display(int[,] Feld)
             {
+                //todo: less comutation if write entire line once 
+                
                 int t = 1;
 
                 for (int i = 0; i < row1; i++)
@@ -157,7 +174,7 @@ namespace _3SudokuSolver
                 //find all the row numbers
                 for (int i = 0; i < row1; i++)
                 {
-                    if (SudokuFeld[i, Row] == tryNumber)
+                    if (SudokuField[i, Row] == tryNumber)
                     {
                         return false;
                     }
@@ -166,7 +183,7 @@ namespace _3SudokuSolver
                 //find all the collumn numbers
                 for (int i = 0; i < collumn1; i++)
                 {
-                    if (SudokuFeld[Collumn, i] == tryNumber)
+                    if (SudokuField[Collumn, i] == tryNumber)
                     {
                         return false;
                     }
@@ -184,7 +201,7 @@ namespace _3SudokuSolver
                 {
                     for (int y = miny; y < miny + 3; y++)
                     {
-                        if (SudokuFeld[x, y] == tryNumber)
+                        if (SudokuField[x, y] == tryNumber)
                         {
                             return false;
                         }
