@@ -7,6 +7,7 @@ namespace _3SudokuSolver
     class Program
     {
 
+        
         static void Main(string[] args)
         {
             int row1 = 9;
@@ -45,6 +46,10 @@ namespace _3SudokuSolver
             SudokuFeld[8, 7] = 7;
             SudokuFeld[8, 8] = 9;
 
+            int maxI = 0;
+            int maxJ = 0;
+            int maxFull = 0;
+
             solve();
 
 
@@ -53,16 +58,26 @@ namespace _3SudokuSolver
 
             Console.ReadKey();
 
-
             //reccursive backtracking to solve 
             void solve()
             {
                 //von [0,0] 
                 for (int i = 0; i < row1; i++)
                 {
+                    if (i > maxI)
+                    {
+                        maxI = i;
+                    }
+
                     //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
+
+                        if (j > maxJ)
+                        {
+                            maxJ = j;
+                        }
+
                         if (SudokuFeld[i, j] == 0)
                         {
                             //für alle möglichen zahlen 1-9
@@ -73,6 +88,7 @@ namespace _3SudokuSolver
                                     // ist möglich kann aber falsch sein 
                                     SudokuFeld[i, j] = n; //one free square less
 
+                                    solve();
 
                                     //ausrechnen ob alle felder richtig belegt sind 
                                     int full = 0;
@@ -84,8 +100,8 @@ namespace _3SudokuSolver
                                         }
                                     }
 
-                                    solve();
-                                
+                                    if (full > maxFull)
+                                        maxFull = full;
 
                                     if (full == 405)
                                     {
@@ -100,6 +116,7 @@ namespace _3SudokuSolver
                         }
                         
                     }
+                    
                 }
 
             }
