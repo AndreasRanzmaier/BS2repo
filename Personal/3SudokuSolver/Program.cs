@@ -11,67 +11,74 @@ namespace _3SudokuSolver
         {
             int row1 = 9;
             int collumn1 = 9;
-            int[,] SudkokuFeld = new int[row1, collumn1];
+            int[,] SudokuFeld = new int[row1, collumn1];
 
             //making one 
-            SudkokuFeld[0, 0] = 5;
-            SudkokuFeld[0, 1] = 3;
-            SudkokuFeld[0, 4] = 7;
-            SudkokuFeld[1, 0] = 6;
-            SudkokuFeld[1, 3] = 1;
-            SudkokuFeld[1, 4] = 9;
-            SudkokuFeld[1, 5] = 5;
-            SudkokuFeld[2, 1] = 9;
-            SudkokuFeld[2, 2] = 8;
-            SudkokuFeld[2, 7] = 6;
-            SudkokuFeld[3, 0] = 8;
-            SudkokuFeld[3, 4] = 6;
-            SudkokuFeld[3, 8] = 3;
-            SudkokuFeld[4, 0] = 4;
-            SudkokuFeld[4, 3] = 8;
-            SudkokuFeld[4, 5] = 3;
-            SudkokuFeld[4, 8] = 1;
-            SudkokuFeld[5, 0] = 7;
-            SudkokuFeld[5, 4] = 2;
-            SudkokuFeld[5, 8] = 6;
-            SudkokuFeld[6, 1] = 6;
-            SudkokuFeld[6, 6] = 2;
-            SudkokuFeld[6, 7] = 8;
-            SudkokuFeld[7, 3] = 4;
-            SudkokuFeld[7, 4] = 1;
-            SudkokuFeld[7, 5] = 9;
-            SudkokuFeld[7, 8] = 5;
-            SudkokuFeld[8, 4] = 8;
-            SudkokuFeld[8, 7] = 7;
-            SudkokuFeld[8, 8] = 9;
+            SudokuFeld[0, 0] = 5;
+            SudokuFeld[0, 1] = 3;
+            SudokuFeld[0, 4] = 7;
+            SudokuFeld[1, 0] = 6;
+            SudokuFeld[1, 3] = 1;
+            SudokuFeld[1, 4] = 9;
+            SudokuFeld[1, 5] = 5;
+            SudokuFeld[2, 1] = 9;
+            SudokuFeld[2, 2] = 8;
+            SudokuFeld[2, 7] = 6;
+            SudokuFeld[3, 0] = 8;
+            SudokuFeld[3, 4] = 6;
+            SudokuFeld[3, 8] = 3;
+            SudokuFeld[4, 0] = 4;
+            SudokuFeld[4, 3] = 8;
+            SudokuFeld[4, 5] = 3;
+            SudokuFeld[4, 8] = 1;
+            SudokuFeld[5, 0] = 7;
+            SudokuFeld[5, 4] = 2;
+            SudokuFeld[5, 8] = 6;
+            SudokuFeld[6, 1] = 6;
+            SudokuFeld[6, 6] = 2;
+            SudokuFeld[6, 7] = 8;
+            SudokuFeld[7, 3] = 4;
+            SudokuFeld[7, 4] = 1;
+            SudokuFeld[7, 5] = 9;
+            SudokuFeld[7, 8] = 5;
+            SudokuFeld[8, 4] = 8;
+            SudokuFeld[8, 7] = 7;
+            SudokuFeld[8, 8] = 9;
 
             solve();
 
 
-            display(SudkokuFeld);
+            display(SudokuFeld);
+
+            
             Console.ReadKey();
 
 
             //reccursive backtracking to solve 
             void solve()
             {
+                //von 00 
                 for (int i = 0; i < row1; i++)
                 {
+                    //bis 88
                     for (int j = 0; j < collumn1; j++)
                     {
+                        //für alle möglichen zahlen
                         for (int n = 1; n < 10; n++)
-                        {
-                            if (Possible(i, j, n))
+                        {                            
+                            if (Possible(i, j, n)) //possible auch falsch wenn schon eine Zahl vorhanden
                             {
-                                SudkokuFeld[i, j] = n;
-                                solve();
-                                SudkokuFeld[i, j] = 0;                                
-                            }
-                        }
+                                // ist möglich kann aber falsch sein 
+                                SudokuFeld[i, j] = n;
+                                solve();                                
+                            }                            
+                        }                      
                     }
                 }
+                
             }            
 
+            //disply the grid
             void display(int[,] Feld)
             {
                 int t = 1;
@@ -103,12 +110,12 @@ namespace _3SudokuSolver
             bool Possible(int Row, int Collumn, int tryNumber)
             {
                 //cant put a number somewhere if there already is one
-                if (SudkokuFeld[Row, Collumn] == 0)
+                if (SudokuFeld[Row, Collumn] == 0)
                 {
                     //find all the row numbers
                     for (int i = 0; i < row1; i++)
                     {
-                        if (SudkokuFeld[i, Row] == tryNumber)
+                        if (SudokuFeld[i, Row] == tryNumber)
                         {
                             return false;
                         }
@@ -117,7 +124,7 @@ namespace _3SudokuSolver
                     //find all the collumn numbers
                     for (int i = 0; i < collumn1; i++)
                     {
-                        if (SudkokuFeld[Collumn, i] == tryNumber)
+                        if (SudokuFeld[Collumn, i] == tryNumber)
                         {
                             return false;
                         }
@@ -136,7 +143,7 @@ namespace _3SudokuSolver
                     {
                         for (int y = miny; y < miny + 3; y++)
                         {
-                            if (SudkokuFeld[x, y] == tryNumber)
+                            if (SudokuFeld[x, y] == tryNumber)
                             {
                                 return false;
                             }
