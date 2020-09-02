@@ -46,9 +46,9 @@ namespace _3SudokuSolver
             SudokuFeld[8, 7] = 7;
             SudokuFeld[8, 8] = 9;
 
+            display(SudokuFeld);
 
             solve();
-
 
             display(SudokuFeld);
 
@@ -69,11 +69,12 @@ namespace _3SudokuSolver
                             //für alle möglichen zahlen 1-9
                             for (int n = 1; n < 10; n++)
                             {
+                                
                                 if (Possible(i, j, n))
                                 {
                                     // ist möglich kann aber falsch sein 
                                     SudokuFeld[i, j] = n; //one free square less
-
+                                    
                                     solve();
 
                                     //ausrechnen ob alle felder richtig belegt sind                                     
@@ -148,15 +149,14 @@ namespace _3SudokuSolver
                     {
                         return false;
                     }
-                }
+                } 
 
-                //find all the numbers in same square 
-
-                int haus = determineHaus(Row, Collumn);
-                int minx = 0;
+                //find all the numbers in same square  
+                int haus = determineHaus(Row, Collumn); 
+                int minx = 0; 
                 int miny = 0;
-
-                minxy(haus, out minx, out miny);
+                 
+                minxy(haus, out minx, out miny); 
 
                 for (int x = minx; x < minx + 3; x++)
                 {
