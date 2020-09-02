@@ -8,20 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\ranzm\\.nuget\\packages\\": {}
+    "C:\\Users\\Ryzen\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+      "projectUniqueName": "C:\\Users\\Ryzen\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
       "projectName": "3SudokuSolver",
-      "projectPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
-      "packagesPath": "C:\\Users\\ranzm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
+      "projectPath": "C:\\Users\\Ryzen\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+      "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ryzen\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ranzm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -58,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

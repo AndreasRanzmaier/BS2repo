@@ -11,3 +11,16 @@ C:\Users\ranzm\source\repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\
 C:\Users\ranzm\source\repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.dll
 C:\Users\ranzm\source\repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.pdb
 C:\Users\ranzm\source\repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.genruntimeconfig.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.exe
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.deps.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.runtimeconfig.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.runtimeconfig.dev.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.dll
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.pdb
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.csprojAssemblyReference.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.AssemblyInfoInputs.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.AssemblyInfo.cs
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.csproj.CoreCompileInputs.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.dll
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.pdb
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.genruntimeconfig.cache
