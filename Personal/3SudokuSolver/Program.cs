@@ -45,10 +45,7 @@ namespace _3SudokuSolver
             SudokuFeld[8, 4] = 8;
             SudokuFeld[8, 7] = 7;
             SudokuFeld[8, 8] = 9;
-
-            int maxI = 0;
-            int maxJ = 0;
-            int maxFull = 0;
+         
 
             solve();
 
@@ -63,21 +60,10 @@ namespace _3SudokuSolver
             {
                 //von [0,0] 
                 for (int i = 0; i < row1; i++)
-                {
-                    if (i > maxI)
-                    {
-                        maxI = i;
-                    }
-
+                {                   
                     //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
-
-                        if (j > maxJ)
-                        {
-                            maxJ = j;
-                        }
-
                         if (SudokuFeld[i, j] == 0)
                         {
                             //für alle möglichen zahlen 1-9
@@ -90,7 +76,7 @@ namespace _3SudokuSolver
 
                                     solve();
 
-                                    //ausrechnen ob alle felder richtig belegt sind 
+                                    //ausrechnen ob alle felder richtig belegt sind                                     
                                     int full = 0;
                                     for (int x = 0; x < row1; x++)
                                     {
@@ -98,27 +84,19 @@ namespace _3SudokuSolver
                                         {
                                             full = full + SudokuFeld[x, y];
                                         }
-                                    }
-
-                                    if (full > maxFull)
-                                        maxFull = full;
-
+                                    }                             
                                     if (full == 405)
                                     {
                                         return;
                                     }
 
                                     SudokuFeld[i, j] = 0;
-
                                 }                          
                             }
                             return;
-                        }
-                        
-                    }
-                    
+                        }                        
+                    }                    
                 }
-
             }
 
             //disply the grid
@@ -157,7 +135,7 @@ namespace _3SudokuSolver
                 //find all the row numbers
                 for (int i = 0; i < row1; i++)
                 {
-                    if (SudokuFeld[i, Row] == tryNumber)
+                    if (SudokuFeld[Row, i] == tryNumber)
                     {
                         return false;
                     }
@@ -166,7 +144,7 @@ namespace _3SudokuSolver
                 //find all the collumn numbers
                 for (int i = 0; i < collumn1; i++)
                 {
-                    if (SudokuFeld[Collumn, i] == tryNumber)
+                    if (SudokuFeld[i, Collumn] == tryNumber)
                     {
                         return false;
                     }
