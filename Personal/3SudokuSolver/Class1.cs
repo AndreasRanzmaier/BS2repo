@@ -6,6 +6,7 @@ namespace _3SudokuSolver
 {
     class SudokuField
     {
+        //todo: 2
 
     }
 }

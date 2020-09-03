@@ -12,48 +12,24 @@ namespace _3SudokuSolver
         {
             int row1 = 9;
             int collumn1 = 9;
-            int[,] SudokuFeld = new int[row1, collumn1];
+            int[,] SudokuField = new int[row1, collumn1];
 
-            //making one 
-            SudokuFeld[0, 0] = 5;
-            SudokuFeld[0, 1] = 3;
-            SudokuFeld[0, 4] = 7;
-            SudokuFeld[1, 0] = 6;
-            SudokuFeld[1, 3] = 1;
-            SudokuFeld[1, 4] = 9;
-            SudokuFeld[1, 5] = 5;
-            SudokuFeld[2, 1] = 9;
-            SudokuFeld[2, 2] = 8;
-            SudokuFeld[2, 7] = 6;
-            SudokuFeld[3, 0] = 8;
-            SudokuFeld[3, 4] = 6;
-            SudokuFeld[3, 8] = 3;
-            SudokuFeld[4, 0] = 4;
-            SudokuFeld[4, 3] = 8;
-            SudokuFeld[4, 5] = 3;
-            SudokuFeld[4, 8] = 1;
-            SudokuFeld[5, 0] = 7;
-            SudokuFeld[5, 4] = 2;
-            SudokuFeld[5, 8] = 6;
-            SudokuFeld[6, 1] = 6;
-            SudokuFeld[6, 6] = 2;
-            SudokuFeld[6, 7] = 8;
-            SudokuFeld[7, 3] = 4;
-            SudokuFeld[7, 4] = 1;
-            SudokuFeld[7, 5] = 9;
-            SudokuFeld[7, 8] = 5;
-            SudokuFeld[8, 4] = 8;
-            SudokuFeld[8, 7] = 7;
-            SudokuFeld[8, 8] = 9;
-
-            display(SudokuFeld);
+            string OneLiner = "010000030000000800026009000000107060900300001000000057100080005390050080050690000";
+            generateOfString(OneLiner);
+            display(SudokuField);
 
             solve();
+            //todo: wenn mehrere Lösungen vorhanden werden diese nicht angezeigt 
+            Console.Clear();
 
-            display(SudokuFeld);
+            display(SudokuField);
 
 
             Console.ReadKey();
+
+            //todo: outsourcen der Funktionen aus main 
+            //todo: entglobalisieren von SudokuField und anderen Variablen
+
 
             //reccursive backtracking to solve 
             void solve()
@@ -64,17 +40,17 @@ namespace _3SudokuSolver
                     //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
-                        if (SudokuFeld[i, j] == 0)
+                        if (SudokuField[i, j] == 0)
                         {
                             //für alle möglichen zahlen 1-9
                             for (int n = 1; n < 10; n++)
                             {
-                                
+
                                 if (Possible(i, j, n))
                                 {
                                     // ist möglich kann aber falsch sein 
-                                    SudokuFeld[i, j] = n; //one free square less
-                                    
+                                    SudokuField[i, j] = n; //one free square less
+
                                     solve();
 
                                     //ausrechnen ob alle felder richtig belegt sind                                     
@@ -83,7 +59,7 @@ namespace _3SudokuSolver
                                     {
                                         for (int y = 0; y < collumn1; y++)
                                         {
-                                            full = full + SudokuFeld[x, y];
+                                            full = full + SudokuField[x, y];
                                         }
                                     }
                                     if (full == 405)
@@ -91,7 +67,7 @@ namespace _3SudokuSolver
                                         return;
                                     }
 
-                                    SudokuFeld[i, j] = 0;
+                                    SudokuField[i, j] = 0;
                                 }
                             }
                             return;
@@ -100,28 +76,47 @@ namespace _3SudokuSolver
                 }
             }
 
+            //generate array from sudoku string 
+            void generateOfString(string OnLine)
+            {
+                int x = 0;
+
+                //von [0,0] 
+                for (int i = 0; i < row1; i++)
+                {
+                    //bis [8,8]
+                    for (int j = 0; j < collumn1; j++)
+                    {
+                        //problem with getting string of numbers to int 
+                        string z = OnLine.Substring(x, 1);
+                        SudokuField[i, j] = Convert.ToInt32(z);
+                        x++;
+                    }
+                }
+            }
+            
             //disply the grid
             void display(int[,] Feld)
             {
+
                 int t = 1;
 
                 for (int i = 0; i < row1; i++)
                 {
                     for (int j = 0; j < collumn1; j++)
                     {
-                        if (((t - 1) % 3 == 0))
+                        if ((((t - 1) % 3 == 0)) && ((t - 1) % 9 != 0))
                         {
                             Console.Write(" | ");
                         }
                         Console.Write(Feld[i, j]);
                         if (t % 9 == 0)
                         {
-
                             Console.Write("\n");
                         }
-                        if (t % 27 == 0)
+                        if ((t % 27 == 0) && (t != 81))
                         {
-                            Console.Write("------------------\n");
+                            Console.Write("---------------\n");
                         }
                         t++;
                     }
@@ -136,7 +131,7 @@ namespace _3SudokuSolver
                 //find all the row numbers
                 for (int i = 0; i < row1; i++)
                 {
-                    if (SudokuFeld[Row, i] == tryNumber)
+                    if (SudokuField[Row, i] == tryNumber)
                     {
                         return false;
                     }
@@ -145,24 +140,24 @@ namespace _3SudokuSolver
                 //find all the collumn numbers
                 for (int i = 0; i < collumn1; i++)
                 {
-                    if (SudokuFeld[i, Collumn] == tryNumber)
+                    if (SudokuField[i, Collumn] == tryNumber)
                     {
                         return false;
                     }
-                } 
+                }
 
                 //find all the numbers in same square  
-                int haus = determineHaus(Row, Collumn); 
-                int minx = 0; 
+                int haus = determineHaus(Row, Collumn);
+                int minx = 0;
                 int miny = 0;
-                 
-                minxy(haus, out minx, out miny); 
+
+                minxy(haus, out minx, out miny);
 
                 for (int x = minx; x < minx + 3; x++)
                 {
                     for (int y = miny; y < miny + 3; y++)
                     {
-                        if (SudokuFeld[x, y] == tryNumber)
+                        if (SudokuField[x, y] == tryNumber)
                         {
                             return false;
                         }
@@ -272,7 +267,7 @@ namespace _3SudokuSolver
                     minx = 3;
                     miny = 6;
                 }
-                else  //haus = 9
+                else  //if haus = 9
                 {
                     minx = 6;
                     miny = 6;
