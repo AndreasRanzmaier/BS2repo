@@ -30,7 +30,6 @@ namespace _3SudokuSolver
             //todo: outsourcen der Funktionen aus main 
             //todo: entglobalisieren von SudokuField und anderen Variablen
 
-
             //reccursive backtracking to solve 
             void solve()
             {
