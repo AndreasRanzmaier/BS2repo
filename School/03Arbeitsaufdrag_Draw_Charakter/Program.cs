@@ -7,6 +7,9 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
     {
         static void Main(string[] args)
         {
+            //Defining the length 
+            int length0 = Int32.Parse(args[0]);
+            int length1 = Int32.Parse(args[1]);
             //Sets Colour
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -14,17 +17,16 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
 
 
             //defines the curser position changeable 
-            int cpl = 5;
-            int cpt = 5;
+            int cpl = length0;
+            int cpt = length1;
             Console.SetCursorPosition(cpl, cpt);
 
             //sets the windowsize 
-            int width = Int32.Parse(args[0]) * 3;
-            int height = Int32.Parse(args[1]) * 2;
+            int width = length0 * 3;
+            int height = length1 * 3;
             Console.SetWindowSize(width, height);
 
-            //Console Title //todo: fehler wird nicht angezeigt
-            Console.Title = "String";
+            //Console Title 
 
             //checks if 3 args have been passed 
             if (args.Length > 2)
@@ -33,10 +35,10 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
                 char Buchstabe = char.Parse(args[2]);
 
                 //loops through rows 
-                for (int i = 0; i <= Int32.Parse(args[1]); i++)
+                for (int i = 0; i <= length1; i++)
                 {
                     //loops through 
-                    for (int j = 0; j < Int32.Parse(args[0]); j++)
+                    for (int j = 0; j < length0 ; j++)
                     {
                         Console.Write(Buchstabe);
                     }
@@ -49,7 +51,7 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
             else
             {
                 //excepion message
-                Console.WriteLine("zu wenig parameter!");
+                Console.WriteLine("zu wenig Parameter!");
             }
 
             Console.ReadKey();
