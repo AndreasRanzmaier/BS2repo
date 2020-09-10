@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "03Arbeitsaufdrag_Draw_Charakter": {
+      "commandName": "Project",
+      "commandLineArgs": "10 5 o"
+    }
+  }
+}

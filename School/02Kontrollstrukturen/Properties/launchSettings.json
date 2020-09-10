@@ -1,8 +1,7 @@
 {
   "profiles": {
     "02Kontrollstrukturen": {
-      "commandName": "Project",
-      "commandLineArgs": "a b c d"
+      "commandName": "Project"
     }
   }
 }

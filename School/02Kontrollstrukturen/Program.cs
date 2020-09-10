@@ -1,5 +1,6 @@
 ﻿//Andreas Ranzmaier 10.09
 using System;
+using System.Dynamic;
 
 namespace _02Kontrollstrukturen
 {
@@ -20,12 +21,15 @@ namespace _02Kontrollstrukturen
                 Console.WriteLine(args[j]);
                 j++;
             }
-
-            //same with dowhile
+           
+            //same with do while
             int u = 0;
             do
             {
-                Console.WriteLine(args[u]);
+                if (args.Length < 0)
+                {
+                    Console.WriteLine(args[u]);
+                }
                 u++;
             } while (u < args.Length);
 
