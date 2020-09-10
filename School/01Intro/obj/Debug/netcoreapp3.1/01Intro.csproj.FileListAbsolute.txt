@@ -1,0 +1,13 @@
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.exe
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.deps.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.runtimeconfig.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.runtimeconfig.dev.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\bin\Debug\netcoreapp3.1\01Intro.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.csprojAssemblyReference.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.AssemblyInfoInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.AssemblyInfo.cs
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.csproj.CoreCompileInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\01Intro\obj\Debug\netcoreapp3.1\01Intro.genruntimeconfig.cache
