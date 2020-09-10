@@ -27,6 +27,8 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
             Console.SetWindowSize(width, height);
 
             //Console Title 
+            Console.Title = "Name Konsole";
+
 
             //checks if 3 args have been passed 
             if (args.Length > 2)
