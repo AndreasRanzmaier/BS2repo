@@ -10,3 +10,4 @@ C:\GIT_repo\AndreasRanzmaier\BS_repo\School\02Kontrollstrukturen\obj\Debug\netco
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\02Kontrollstrukturen\obj\Debug\netcoreapp3.1\02Kontrollstrukturen.dll
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\02Kontrollstrukturen\obj\Debug\netcoreapp3.1\02Kontrollstrukturen.pdb
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\02Kontrollstrukturen\obj\Debug\netcoreapp3.1\02Kontrollstrukturen.genruntimeconfig.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\02Kontrollstrukturen\obj\Debug\netcoreapp3.1\02Kontrollstrukturen.csprojAssemblyReference.cache
