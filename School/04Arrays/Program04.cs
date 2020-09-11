@@ -1,4 +1,5 @@
-﻿using System;
+﻿//11.09 Andreas Ranzmaier
+using System;
 
 namespace _04Arrays
 {
@@ -6,7 +7,7 @@ namespace _04Arrays
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
