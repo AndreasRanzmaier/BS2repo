@@ -22,6 +22,10 @@ namespace _04Arrays
                 arr1D[i] = Convert.ToInt32(Console.ReadLine());
             }
 
+            foreach (var item in arr1D)
+            {
+                Console.Write(item + "-");
+            }
             //2D
             //Console.WriteLine("2D Array");
             //int length2D_1 = 0;
