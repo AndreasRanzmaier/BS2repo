@@ -1,6 +1,5 @@
 ﻿//11.09 Andreas Ranzmaier
 using System;
-using System.Dynamic;
 
 namespace _04Arrays
 {
@@ -26,6 +25,8 @@ namespace _04Arrays
             {
                 Console.Write(item + "-");
             }
+
+
             //2D
             //Console.WriteLine("2D Array");
             //int length2D_1 = 0;
