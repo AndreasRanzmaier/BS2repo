@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {}
+    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\04Arrays\\04Arrays.csproj": {}
   },
   "projects": {
-    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {
+    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\04Arrays\\04Arrays.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
-        "projectName": "3SudokuSolver",
-        "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+        "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\04Arrays\\04Arrays.csproj",
+        "projectName": "04Arrays",
+        "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\04Arrays\\04Arrays.csproj",
         "packagesPath": "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
+        "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\04Arrays\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

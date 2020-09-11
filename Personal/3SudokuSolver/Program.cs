@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Runtime.Serialization.Formatters;
+//using System.Runtime.Serialization.Formatters;
 
 namespace _3SudokuSolver
 {
     // https://www.sudokuwiki.org/sudoku.htm  
     class Program
     {
-
-
+        //todo asdf
         static void Main(string[] args)
         {
             int row1 = 9;
@@ -20,9 +19,7 @@ namespace _3SudokuSolver
 
             solve();
             //todo: wenn mehrere Lösungen vorhanden werden diese nicht angezeigt 
-            Console.Clear();
-
-            display(SudokuField);
+            //
 
 
             Console.ReadKey();
@@ -48,7 +45,10 @@ namespace _3SudokuSolver
                                 if (Possible(i, j, n))
                                 {
                                     // ist möglich kann aber falsch sein 
+                                    //todo: visualisierung 
+                                    Console.Clear();
                                     SudokuField[i, j] = n; //one free square less
+                                    display(SudokuField);
 
                                     solve();
 
@@ -86,7 +86,7 @@ namespace _3SudokuSolver
                     //bis [8,8]
                     for (int j = 0; j < collumn1; j++)
                     {
-                        //problem with getting string of numbers to int 
+                        
                         string z = OnLine.Substring(x, 1);
                         SudokuField[i, j] = Convert.ToInt32(z);
                         x++;
@@ -97,7 +97,7 @@ namespace _3SudokuSolver
             //disply the grid
             void display(int[,] Feld)
             {
-
+                //todo: display one line at a time (timesaveing)
                 int t = 1;
 
                 for (int i = 0; i < row1; i++)

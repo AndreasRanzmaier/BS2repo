@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Globalization;
+//using System.Globalization;
 
 namespace _03Arbeitsaufdrag_Draw_Charakter
 {
@@ -29,12 +29,11 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
             //Console Title 
             Console.Title = "Name Konsole";
 
-
             //checks if 3 args have been passed 
             if (args.Length > 2)
             {
                 //defines the written letter 
-                char Buchstabe = char.Parse(args[2]);
+                char Buchstabe = char.Parse(args[2]);                                                                                                                                                                                                                                                                                                                                                                                                                                  
 
                 //loops through rows 
                 for (int i = 0; i <= length1; i++)
@@ -46,7 +45,7 @@ namespace _03Arbeitsaufdrag_Draw_Charakter
                     }
 
                     //makes the backslash and sets the cursor to the right position
-                    Console.Write("\n");
+                   Console.Write("\n");
                     Console.SetCursorPosition(cpl,cpt+i);
                 }
             }
