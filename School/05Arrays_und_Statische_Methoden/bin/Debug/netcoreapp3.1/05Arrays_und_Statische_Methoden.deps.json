@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "05Arrays_und_Statische_Methoden/1.0.0": {
+        "runtime": {
+          "05Arrays_und_Statische_Methoden.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "05Arrays_und_Statische_Methoden/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
