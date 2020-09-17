@@ -52,7 +52,7 @@ namespace _06
                     case 4:
                         //grid
                         Grid();
-                        System.Threading.Thread.Sleep(2000);
+                        System.Threading.Thread.Sleep(6000);
                         Console.Clear();
                         break;
                 }
@@ -174,7 +174,13 @@ namespace _06
         static void DrawGrid (int top, int left, int cellsize, int nOfCols, int nOfRows)
         {
 
-            DrawRect(top, left, cellsize, cellsize);
+            for (int i = 0; i < nOfCols; i++)
+            {
+                for (int j = 0; j < nOfRows; j++)
+                {
+                    DrawRect(top + (i * cellsize) - (i*1), left + (j * cellsize) - (j*1), cellsize, cellsize);
+                }
+            }
         }
     }
 }
