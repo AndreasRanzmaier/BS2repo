@@ -10,14 +10,13 @@ namespace _06
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-            Abfrage();
-
+            UIInput();
             Console.WriteLine("end");
 
         }
 
         //user input for Menu
-        static void Abfrage()
+        static void UIInput()
         {
             Console.WriteLine("Auswahl");
             Console.WriteLine("[1=vertical, 2= horizontal, 3= Rechteck, 4 = Grid, 5 = beenden]");
@@ -30,31 +29,35 @@ namespace _06
                 {
                     case 1:
                         //Vertical
-                        ImputVLine();
+                        InputVLine();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
+
                         break;
                     case 2:
                         //Horizontal
-                        ImputHLine();
+                        InputHLine();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
+
                         break;
                     case 3:
                         //Rect
-                        ImputRect();
+                        InputRect();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
+
                         break;
                     case 4:
                         //grid
-                        ImputGrid();
+                        InputGrid();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
+
                         break;
                 }
                 // spielt den selben song noch mal! alles klar den selben song und los 
-                Abfrage();
+                UIInput();
             }
             else
             {
@@ -62,8 +65,8 @@ namespace _06
                 return;
             }
         }
-
-        static void ImputVLine()
+                
+        static void InputVLine()
         {
             //input 
             Console.WriteLine("top :");
@@ -84,7 +87,6 @@ namespace _06
             //todo: buffer size fail if input grater than ~100
             Console.SetCursorPosition(left, top);
 
-
             for (int i = 0; i < height+1; i++)
             {
                 Console.Write("*\n");
@@ -92,7 +94,7 @@ namespace _06
             }
         }
 
-        static void ImputHLine()
+        static void InputHLine()
         {
             //input 
             Console.WriteLine("top :");
@@ -118,7 +120,7 @@ namespace _06
             }
         }
 
-        static void ImputRect()
+        static void InputRect()
         {
             //input 
             Console.WriteLine("top :");
@@ -151,7 +153,7 @@ namespace _06
 
         }
 
-        static void ImputGrid()
+        static void InputGrid()
         {
             //input 
             Console.WriteLine("top :");
@@ -183,4 +185,3 @@ namespace _06
         }
     }
 }
-
