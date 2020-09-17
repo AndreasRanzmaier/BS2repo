@@ -1,7 +1,5 @@
 ﻿//Ranzmaier Andreas 17.9.2020
 using System;
-using System.Diagnostics;
-using System.Dynamic;
 
 namespace _06
 {
@@ -9,10 +7,9 @@ namespace _06
     {
         static void Main(string[] args)
         {
-            //uncomment when snipping 
-            //Console.BackgroundColor = ConsoleColor.White;
-            //Console.ForegroundColor = ConsoleColor.Black;
-            //Console.Clear();
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
             Abfrage();
 
             Console.WriteLine("end");
@@ -33,38 +30,40 @@ namespace _06
                 {
                     case 1:
                         //Vertical
-                        VLine();
+                        ImputVLine();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
                         break;
                     case 2:
                         //Horizontal
-                        HLine();
+                        ImputHLine();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
                         break;
                     case 3:
                         //Rect
-                        Rect();
+                        ImputRect();
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
                         break;
                     case 4:
                         //grid
-                        Grid();
-                        System.Threading.Thread.Sleep(6000);
+                        ImputGrid();
+                        System.Threading.Thread.Sleep(2000);
                         Console.Clear();
                         break;
                 }
+                // spielt den selben song noch mal! alles klar den selben song und los 
                 Abfrage();
             }
             else
             {
+                //close application if input was 5
                 return;
             }
         }
 
-        static void VLine()
+        static void ImputVLine()
         {
             //input 
             Console.WriteLine("top :");
@@ -93,7 +92,7 @@ namespace _06
             }
         }
 
-        static void HLine()
+        static void ImputHLine()
         {
             //input 
             Console.WriteLine("top :");
@@ -119,7 +118,7 @@ namespace _06
             }
         }
 
-        static void Rect()
+        static void ImputRect()
         {
             //input 
             Console.WriteLine("top :");
@@ -144,7 +143,7 @@ namespace _06
 
             DrawHLine(top, left, width);
 
-            //hights -2cus 2 height from vertical  
+            //hights -2 cus 2 height from vertical  
             DrawVLine(top+1, left, height-2);
             DrawVLine(top+1, left+width-1, height-2);
 
@@ -152,7 +151,7 @@ namespace _06
 
         }
 
-        static void Grid()
+        static void ImputGrid()
         {
             //input 
             Console.WriteLine("top :");
@@ -174,9 +173,9 @@ namespace _06
         static void DrawGrid (int top, int left, int cellsize, int nOfCols, int nOfRows)
         {
 
-            for (int i = 0; i < nOfCols; i++)
+            for (int i = 0; i < nOfRows; i++)
             {
-                for (int j = 0; j < nOfRows; j++)
+                for (int j = 0; j < nOfCols; j++)
                 {
                     DrawRect(top + (i * cellsize) - (i*1), left + (j * cellsize) - (j*1), cellsize, cellsize);
                 }
