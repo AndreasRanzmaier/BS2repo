@@ -10,13 +10,13 @@ namespace _06
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-            UIInput();
+
+            UI();
             Console.WriteLine("end");
 
         }
-
-        //user input for Menu
-        static void UIInput()
+       
+        static void UI()
         {
             Console.WriteLine("Auswahl");
             Console.WriteLine("[1=vertical, 2= horizontal, 3= Rechteck, 4 = Grid, 5 = beenden]");
@@ -65,14 +65,16 @@ namespace _06
                 return;
             }
         }
-                
+
         static void InputVLine()
         {
             //input 
             Console.WriteLine("top :");
             int top = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("left :");
             int left = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("height :");
             int height = Convert.ToInt32(Console.ReadLine());
 
@@ -87,7 +89,7 @@ namespace _06
             //todo: buffer size fail if input grater than ~100
             Console.SetCursorPosition(left, top);
 
-            for (int i = 0; i < height+1; i++)
+            for (int i = 0; i < height + 1; i++)
             {
                 Console.Write("*\n");
                 Console.SetCursorPosition(left, top + i);
@@ -99,8 +101,10 @@ namespace _06
             //input 
             Console.WriteLine("top :");
             int top = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("left :");
             int left = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("width :");
             int width = Convert.ToInt32(Console.ReadLine());
 
@@ -125,10 +129,13 @@ namespace _06
             //input 
             Console.WriteLine("top :");
             int top = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("left :");
             int left = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("height :");
             int height = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("width :");
             int width = Convert.ToInt32(Console.ReadLine());
 
@@ -146,10 +153,10 @@ namespace _06
             DrawHLine(top, left, width);
 
             //hights -2 cus 2 height from vertical  
-            DrawVLine(top+1, left, height-2);
-            DrawVLine(top+1, left+width-1, height-2);
+            DrawVLine(top + 1, left, height - 2);
+            DrawVLine(top + 1, left + width - 1, height - 2);
 
-            DrawHLine(top+height-1, left, width);
+            DrawHLine(top + height - 1, left, width);
 
         }
 
@@ -158,12 +165,16 @@ namespace _06
             //input 
             Console.WriteLine("top :");
             int top = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("left :");
             int left = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("cellsize :");
             int cellsize = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("nOfCols :");
             int nOfCols = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("nOfRows :");
             int nOfRows = Convert.ToInt32(Console.ReadLine());
 
@@ -172,14 +183,13 @@ namespace _06
             DrawGrid(top, left, cellsize, nOfCols, nOfRows);
         }
 
-        static void DrawGrid (int top, int left, int cellsize, int nOfCols, int nOfRows)
+        static void DrawGrid(int top, int left, int cellsize, int nOfCols, int nOfRows)
         {
-
             for (int i = 0; i < nOfRows; i++)
             {
                 for (int j = 0; j < nOfCols; j++)
                 {
-                    DrawRect(top + (i * cellsize) - (i*1), left + (j * cellsize) - (j*1), cellsize, cellsize);
+                    DrawRect(top + (i * cellsize) - (i * 1), left + (j * cellsize) - (j * 1), cellsize, cellsize);
                 }
             }
         }

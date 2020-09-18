@@ -5,7 +5,6 @@ namespace _05Arrays_und_Statische_Methoden
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Console.BackgroundColor = ConsoleColor.White;
@@ -60,9 +59,6 @@ namespace _05Arrays_und_Statische_Methoden
 
             //output
             outp_arr1D(arr1D);
-
-
-
         }
 
         static void array2D()
@@ -76,10 +72,7 @@ namespace _05Arrays_und_Statische_Methoden
             Console.WriteLine("reihen:");
             length2D_1 = Convert.ToInt32(Console.ReadLine());
 
-
-
             int[,] arr2D = new int[length2D_1, length2D_2];
-
 
             for (int i = 0; i < length2D_1; i++)
             {
@@ -117,7 +110,7 @@ namespace _05Arrays_und_Statische_Methoden
             {
                 for (int j = 0; j < arr2D[i].Length; j++)
                 {
-                    Console.WriteLine("arr2D at [" + i +","+ j +"]" );
+                    Console.WriteLine("arr2D at [" + i + "," + j + "]");
                     arr2D[i][j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
