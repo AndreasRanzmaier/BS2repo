@@ -1,0 +1,13 @@
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.exe
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.deps.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.runtimeconfig.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.runtimeconfig.dev.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\bin\Debug\netcoreapp3.1\09Übung zu Arrays.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.csprojAssemblyReference.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.AssemblyInfoInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.AssemblyInfo.cs
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.csproj.CoreCompileInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\09Übung zu Arrays\obj\Debug\netcoreapp3.1\09Übung zu Arrays.genruntimeconfig.cache

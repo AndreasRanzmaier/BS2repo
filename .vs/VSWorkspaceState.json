@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\School"
+    "\\School",
+    "\\School\\07ArrayAufgaben"
   ],
-  "SelectedNode": "\\School\\07ArrayAufgaben",
+  "SelectedNode": "\\School\\07ArrayAufgaben\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

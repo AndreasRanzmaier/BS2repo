@@ -1,4 +1,5 @@
-﻿using System;
+﻿9using System;
+using System.Data;
 using System.Security.Cryptography;
 
 namespace _07ArrayAufgaben
@@ -118,19 +119,24 @@ namespace _07ArrayAufgaben
                     arr2D[i, j] = ' ';
                 }
             }
+
             //alle ränder 
-            for (int i = 0; i < lD1; i++)
+            for (int i = 0; i < lD2; i++)
             {
+                //alles oben 
                 arr2D[0, i] = '*';
-                arr2D[i, lD2 - 1] = '*';
+                //alle unten 
+                arr2D[(lD1 - 1), i] = '*';
             }
 
-            for (int j = 0; j < lD2; j++)
+            for (int j = 0; j < lD1; j++)
             {
+                //alles links 
                 arr2D[j, 0] = '*';
-                arr2D[lD1 - 1, j] = '*';
-                
+                //alles rechts 
+                arr2D[j, (lD2 - 1)] = '*';
             }
+
             //todo: fehler mit ungleichen arrays prob loop problem 
         }
 

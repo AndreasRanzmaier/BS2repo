@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "09Übung zu Arrays/1.0.0": {
+        "runtime": {
+          "09Übung zu Arrays.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "09Übung zu Arrays/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
