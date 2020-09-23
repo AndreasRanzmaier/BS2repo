@@ -1,5 +1,7 @@
 ﻿//Ranzmaier Andreas 23.09.2020
 using System;
+using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace _08Datentypen
 {
@@ -7,12 +9,27 @@ namespace _08Datentypen
     {
         static void Main(string[] args)
         {
-            int i = 15;
-            decimal d = i;
+            string s1 = "";
+            Einlesen(ref s1);
 
-            i = 100;
-            //short s = i;
-            short s = (short)i;
+            Console.WriteLine(s1);
         }
+
+        static void Einlesen(ref string s1)
+        {
+            bool goo = true;
+            do
+            {
+                Console.WriteLine("Eingabe:");
+
+                s1 += Console.ReadLine();
+
+                if (s1.Contains('.'))
+                {
+                    goo = false;
+                }
+            } while (goo);
+        }
+
     }
 }
