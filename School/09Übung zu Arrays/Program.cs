@@ -39,6 +39,8 @@ namespace _09Übung_zu_Arrays
             int[] arr1 = new int[l];
 
             //todo: geht das auch einfacher?? 
+            //goo könnte gleich array an stelle x sein 
+
             int i = 0;
             int foo = 0;
             while (i < l)
@@ -54,7 +56,6 @@ namespace _09Übung_zu_Arrays
                     arr1[i] = goo;
                     i++;
                 }
-
             }
 
             foreach (var item in arr1)
