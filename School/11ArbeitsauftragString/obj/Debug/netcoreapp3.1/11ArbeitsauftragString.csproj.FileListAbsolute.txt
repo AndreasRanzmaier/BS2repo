@@ -1,0 +1,13 @@
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.exe
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.deps.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.runtimeconfig.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.runtimeconfig.dev.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\bin\Debug\netcoreapp3.1\11ArbeitsauftragString.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.csprojAssemblyReference.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.AssemblyInfoInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.AssemblyInfo.cs
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.csproj.CoreCompileInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\11ArbeitsauftragString\obj\Debug\netcoreapp3.1\11ArbeitsauftragString.genruntimeconfig.cache
