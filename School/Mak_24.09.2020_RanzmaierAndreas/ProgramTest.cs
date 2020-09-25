@@ -9,10 +9,10 @@ namespace Mak_24._09._2020_RanzmaierAndreas
     {
         static void Main(string[] args)
         {
-            Menü();   
+            Menue();   
         }
 
-        static void Menü()
+        static void Menue()
         {
             int ausw = 0;
             Console.WriteLine("1. 2DArray + Add");
@@ -38,7 +38,7 @@ namespace Mak_24._09._2020_RanzmaierAndreas
                         break;
                 }
                 // spielt den selben song noch mal! alles klar den selben song und los 
-                Menü();
+                Menue();
             }
             else
             {
