@@ -6,7 +6,7 @@ namespace _11ArbeitsauftragString
     {
         static void Main(string[] args)
         {
-            string xml = "Huber: APHM=5, Inf=5, PGTL=2, Atm=2 ;Schuster: APMH=3, INF=1, PGTL=1, Atm=3";
+            string xml = "Huber: APHM=5, Inf=5, PGTL=2, Atm=2 ;Schuster: APMH=3, INF=1, PGTL=1, Atm=3, a=5";
 
             get_NotenschnittNames(out float[] arrNotenschnitt, out string[] arrNamen, xml);
             print_Table(arrNotenschnitt, arrNamen);
