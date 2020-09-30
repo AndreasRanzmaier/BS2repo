@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace _11ArbeitsauftragString
 {
@@ -6,13 +7,34 @@ namespace _11ArbeitsauftragString
     {
         static void Main(string[] args)
         {
-            string xml = "Huber: APHM=5, Inf=5, PGTL=2, Atm=2 ;Schuster: APMH=3, INF=1, PGTL=1, Atm=3, a=5";
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
 
-            get_NotenschnittNames(out float[] arrNotenschnitt, out string[] arrNamen, xml);
+            string datei = "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\11ArbeitsauftragString\\Text.txt";
+
+            get_NotenschnittNames(out float[] arrNotenschnitt, out string[] arrNamen, get_Text_from_file(datei));
             print_Table(arrNotenschnitt, arrNamen);
-
         }
 
+        //reads each line from a file and converts it into one string
+        static string get_Text_from_file(string path)
+        {
+            FileInfo f = new FileInfo(path);
+            StreamReader r = f.OpenText();
+            string zeile;
+            string gesFile = "";
+            do
+            {
+                zeile = r.ReadLine();
+                gesFile += zeile;
+            } while (zeile != null);
+
+            return gesFile;
+            r.Close();
+        }
+
+        //clacs the names and the grades 
         static void get_NotenschnittNames(out float[] Noten, out string[] Namen, string xml)
         {
             //wieviele namen
@@ -43,8 +65,8 @@ namespace _11ArbeitsauftragString
                     Noten[j] += xml[(i + 1)] & 0x0f;
                 }
             }
+
             //notensumme / anzahl der = 
-            //todo: es wird dafon ausgegangen das alle schüler gleich viele fächer haben 
             for (int i = 0; i < Noten.Length; i++)
             {
                 Noten[i] = Noten[i] / (temp / Noten.Length);
@@ -77,6 +99,7 @@ namespace _11ArbeitsauftragString
             }
         }
 
+        //adds both arrays and prits a third one 
         static void print_Table(float[] Noten, string[] Namen)
         {
             //erzeugen eines ges. string arr 
@@ -92,7 +115,7 @@ namespace _11ArbeitsauftragString
             }
 
             //printing it 
-            for (int j = 0; j < Namen.Length; j++)
+            for (int j = 0; j < Namen.Length; j++) 
             {
                 Console.Write(ges[0, j] + ": ");
                 Console.WriteLine(ges[1, j]);

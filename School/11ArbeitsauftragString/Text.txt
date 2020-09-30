@@ -1,0 +1,4 @@
+Huber: APHM=5, Inf=5, PGTL=2, Atm=2 ;
+Schuster: APMH=3, INF=1, PGTL=1, Atm=3 ;
+Maier: APMH=2, INF=1, PGTL=1, Atm=2 ;
+
