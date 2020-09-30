@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\School"
+    "\\MySQL_Uebungen",
+    "\\School",
+    "\\School\\11ArbeitsauftragString\\bin",
+    "\\School\\12WorkingWithATxtDatei\\bin\\Debug"
   ],
-  "SelectedNode": "\\School\\11ArbeitsauftragString",
+  "SelectedNode": "\\MySQL_Uebungen\\01_Uebung.sql",
   "PreviewInSolutionExplorer": false
 }
