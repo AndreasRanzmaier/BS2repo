@@ -4,10 +4,20 @@
 
 show databases;
 
+-- DB ERSTELLEN 
+-- NUR IN DER SCHULE ZUERST DB LÖSCHEN 
+drop databases if exists 01einfuehrung_schule;
+
+create database 01einfuehrung_schule;
+
+-- Tabelle Person erstellen 
 -- Schema auswählen;
 use 01einfuehrung_schule;
 
 -- tabellen anzeigen
+create table person(per_id int primary key auto_increment,
+per_vorname varchar(50), per_nachname varchar(50) not null);
+
 show tables;
 
 /*
@@ -55,8 +65,10 @@ show create table person;
 describe person;
 
 -- datensatz attribute einfügen
-insert into person values (null, "Oliver", "Bauer"), (10, "Hannes", "Huspek");
-	
+insert into person values 	(null, "Oliver", "Bauer"),
+							(null, "Hannes", "Huspek"),
+							(null, "Jakob", "Schmidt"),
+							(null, "Martha", "Huber");
 -- Query: Abfrage auf Tabellen einfaches select Statement 
 select * 
 from person;
@@ -137,6 +149,8 @@ from person;
 select
 	concat_ws(" - ", concat_ws(" ", per_nachname, per_vorname), per_id) as "name"
 from person;
+
+-- 
 
 
 
