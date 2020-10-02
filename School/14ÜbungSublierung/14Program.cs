@@ -47,13 +47,53 @@ namespace _14ÜbungSublierung
 
         static void Dict02()
         {
-            string[] arr = { "Hugo Schuster", "Hugo Mayr", "Hugo Test", "Max Muster" };
+            string[] arr = { "Hugo Schuster", "Hugo Mayr", "Hugo Test", "Anton Muster", "Anton AAter" };
 
-            Dictionary<string, List<string>> tempDict = new Dictionary<string, List<string>>();
+            //Sorted Dict sorts the Key 
+            SortedDictionary<string, List<string>> tmpDict = new SortedDictionary<string, List<string>>();
 
-            foreach (var tmp in arr)
+            foreach (var tmpNames in arr)
+            {
+                string[] tmpVals = tmpNames.Split(' ');
+
+                string tmpFirstname = tmpVals[0];
+                string tmpLastName = tmpVals[1];
+
+                if (!tmpDict.ContainsKey(tmpFirstname))
+                {
+                    tmpDict.Add(tmpFirstname, new List<string>());                    
+                }
+                tmpDict[tmpFirstname].Add(tmpLastName);               
+            }
+
+            
+
+            //ausgabe
+            foreach (var tmpVal in tmpDict)
+            {
+                tmpVal.Value.Sort();
+
+                Console.Write($"{tmpVal.Key}: ");
+                foreach (var tmpName in tmpVal.Value)
+                {
+                    Console.Write($"{tmpName},");
+                }
+                Console.WriteLine("\n");
+            }
+        }
+
+        static void Dict03()
+        {
+            
+
+            static void 
+
+            static Dictionary<string, int> CountSameWords(string path)
             {
 
+
+
+                return ;
             }
         }
     }
