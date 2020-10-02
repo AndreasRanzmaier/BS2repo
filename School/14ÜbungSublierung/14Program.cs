@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
@@ -84,9 +85,13 @@ namespace _14ÜbungSublierung
 
         static void Dict03()
         {
-            
+            string datei = @"textFile.txt";
 
-            static void 
+            if (File.Exists(datei))
+            {
+
+            }
+            FileInfo f = new FileInfo(datei);
 
             static Dictionary<string, int> CountSameWords(string path)
             {
