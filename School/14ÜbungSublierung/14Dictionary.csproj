@@ -6,4 +6,8 @@
     <RootNamespace>_14ÜbungSublierung</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.3.0" />
+  </ItemGroup>
+  
 </Project>

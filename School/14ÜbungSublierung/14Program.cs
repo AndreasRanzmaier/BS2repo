@@ -1,7 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Text;
+using System.Text.Unicode;
 
 namespace _14ÜbungSublierung
 {
@@ -9,7 +12,7 @@ namespace _14ÜbungSublierung
     {
         static void Main(string[] args)
         {
-            Dict02();
+            Dict03();
         }
 
         static void Dict01()
@@ -62,12 +65,12 @@ namespace _14ÜbungSublierung
 
                 if (!tmpDict.ContainsKey(tmpFirstname))
                 {
-                    tmpDict.Add(tmpFirstname, new List<string>());                    
+                    tmpDict.Add(tmpFirstname, new List<string>());
                 }
-                tmpDict[tmpFirstname].Add(tmpLastName);               
+                tmpDict[tmpFirstname].Add(tmpLastName);
             }
 
-            
+
 
             //ausgabe
             foreach (var tmpVal in tmpDict)
@@ -85,20 +88,96 @@ namespace _14ÜbungSublierung
 
         static void Dict03()
         {
-            string datei = @"textFile.txt";
+            {
+                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile2.txt";
 
-            if (File.Exists(datei))
+                if (File.Exists(datei))
+                {
+                    Console.WriteLine("Zeilen: " + CountLines(datei));
+                    Console.WriteLine("Wörter: " + CountWords(datei));
+                    Console.WriteLine("Buzchstaben: " + CountLetters(datei));
+                }
+                else
+                {
+                    //error if missing 
+                    Console.WriteLine("missing TextFile");
+                }
+            }
+
+            static int CountLines(string path)
+            {
+                string st = GetTextFromFile(path);
+                int numLines = GetTextFromFile(path).Split('\n').Length;
+
+                return numLines;
+            }
+
+            static int CountWords(string path)
+            {
+                static string[] GetWords(string input)
+                {
+                    MatchCollection matches = Regex.Matches(input, @"\b[\w']*\b");
+
+                    var words = from m in matches.Cast<Match>()
+                                where !string.IsNullOrEmpty(m.Value)
+                                select TrimSuffix(m.Value);
+
+                    return words.ToArray();
+                }
+
+                static string TrimSuffix(string word)
+                {
+                    int apostropheLocation = word.IndexOf('\'');
+                    if (apostropheLocation != -1)
+                    {
+                        word = word.Substring(0, apostropheLocation);
+                    }
+
+                    return word;
+                }
+
+                return GetWords(GetTextFromFile(path)).Length;
+            }
+
+            static int CountLetters(string path)
+            {
+                string tmp = GetTextFromFile(path);
+
+                string str =  RemoveSpecialChr(tmp);
+
+
+
+                static string RemoveSpecialChr(string st1)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (char c in st1)
+                    {
+                        if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') )
+                        {
+                            sb.Append(c);
+                        }
+                    }
+                    return sb.ToString();
+                }
+
+                int result = str.Length;
+                return result;
+            }
+
+            static void ausgabe()
             {
 
             }
-            FileInfo f = new FileInfo(datei);
 
-            static Dictionary<string, int> CountSameWords(string path)
+            static string GetTextFromFile(string path)
             {
+                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+                ////ausnahmen für sonderzeichen 
+                FileInfo f = new FileInfo(path);
+                //StreamReader re = f.OpenText();
+                StreamReader re = new StreamReader(f.OpenText().BaseStream, Encoding.GetEncoding(1252));
 
-
-
-                return ;
+                return re.ReadToEnd();
             }
         }
     }
