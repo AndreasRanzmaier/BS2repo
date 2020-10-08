@@ -12,6 +12,7 @@ namespace _14ÜbungSublierung
     {
         static void Main(string[] args)
         {
+            //nur Dict3 beachtenb 1,2 sind andere kleine übungen
             Dict03();
         }
 
@@ -42,7 +43,7 @@ namespace _14ÜbungSublierung
             }
 
             //ausgabe des dicts'
-            foreach (/*KeyValuePair<string, int>*/var TmpVal in tmpDict)
+            foreach (var TmpVal in tmpDict)
             {
                 Console.WriteLine($"Name={TmpVal.Key}, Anzahl={TmpVal.Value}");
             }
@@ -85,7 +86,8 @@ namespace _14ÜbungSublierung
                 Console.WriteLine("\n");
             }
         }
-
+        
+        //jetztige aufgabe
         static void Dict03()
         {
             {
@@ -96,12 +98,21 @@ namespace _14ÜbungSublierung
                     Console.WriteLine("Zeilen: " + CountLines(datei));
                     Console.WriteLine("Wörter: " + CountWords(datei));
                     Console.WriteLine("Buzchstaben: " + CountLetters(datei));
+                    AusgabeBstrPunkte(datei);
                 }
                 else
                 {
-                    //error if missing 
+                    //error msg if missing 
                     Console.WriteLine("missing TextFile");
                 }
+            }
+
+            static void AusgabeBstrPunkte (string path)
+            {
+                int[] tmparr = GetBeistrPunkte(path);
+
+                Console.WriteLine("Punkte: " + tmparr[0]);
+                Console.WriteLine("Beistriche: " + tmparr[1]);
             }
 
             static int CountLines(string path)
@@ -152,7 +163,8 @@ namespace _14ÜbungSublierung
                     StringBuilder sb = new StringBuilder();
                     foreach (char c in st1)
                     {
-                        if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') )
+                        if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == 'ä'
+                            || c == 'Ä' || c == 'ü' || c == 'Ü' || c == 'ö' || c == 'Ö' || c == 'ß')
                         {
                             sb.Append(c);
                         }
@@ -163,12 +175,7 @@ namespace _14ÜbungSublierung
                 int result = str.Length;
                 return result;
             }
-
-            static void ausgabe()
-            {
-
-            }
-
+         
             static string GetTextFromFile(string path)
             {
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -179,6 +186,26 @@ namespace _14ÜbungSublierung
 
                 return re.ReadToEnd();
             }
+
+            static int[] GetBeistrPunkte (string path)
+            {
+                int[] tmpstringarr = new int[2];
+                string tmp = GetTextFromFile(path);
+                foreach (var item in tmp)
+                {
+                    if (item == '.')
+                    {
+                        tmpstringarr[0]++;
+                    }
+                    if (item == ',')
+                    {
+                        tmpstringarr[1]++;
+                    }
+                }
+                return tmpstringarr;
+            }
+
+            
         }
     }
 }
