@@ -91,12 +91,13 @@ namespace _14ÜbungSublierung
         static void Dict03()
         {
             {
-                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile2.txt";
+                //txt file muss mit utf-8 BOM gespeichert sein 
+                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile3.txt";
 
                 if (File.Exists(datei))
                 {
                     Console.WriteLine("Zeilen: " + CountLines(datei));
-                    Console.WriteLine("Wörter: " + CountWords(datei));
+                    Console.WriteLine("Wörter: " + CountWords(datei, out Dictionary<string, int> SameWords));
                     Console.WriteLine("Buzchstaben: " + CountLetters(datei));
                     AusgabeBstrPunkte(datei);
                 }
@@ -123,7 +124,7 @@ namespace _14ÜbungSublierung
                 return numLines;
             }
 
-            static int CountWords(string path)
+            static int CountWords(string path, out Dictionary<string, int> SameWords)
             {
                 static string[] GetWords(string input)
                 {
@@ -135,7 +136,7 @@ namespace _14ÜbungSublierung
 
                     return words.ToArray();
                 }
-
+             
                 static string TrimSuffix(string word)
                 {
                     int apostropheLocation = word.IndexOf('\'');
@@ -147,9 +148,32 @@ namespace _14ÜbungSublierung
                     return word;
                 }
 
+                //Aufgabe 2 
+                static Dictionary<string, int> CountSameWords(string path)
+                {
+                    Dictionary<string, int> tmpDict = new Dictionary<string, int>();
+                    string[] tmp = GetWords(GetTextFromFile(path));
+                    foreach (var tmpName in tmp)
+                    {                     
+                        if (!tmpDict.ContainsKey(tmpName))
+                        {
+                            //ist das wort nicht vorhanden wird es angelegt 
+                            tmpDict.Add(tmpName, 1);
+                        }
+                        else
+                        {
+                            //ist es schon vorhanden wird er erhöht
+                            tmpDict[tmpName]++;
+                        }
+                    }
+                    return null;
+                }
+
+                SameWords = CountSameWords(path);
+
                 return GetWords(GetTextFromFile(path)).Length;
             }
-
+            
             static int CountLetters(string path)
             {
                 string tmp = GetTextFromFile(path);
@@ -203,9 +227,7 @@ namespace _14ÜbungSublierung
                     }
                 }
                 return tmpstringarr;
-            }
-
-            
+            }            
         }
     }
 }
