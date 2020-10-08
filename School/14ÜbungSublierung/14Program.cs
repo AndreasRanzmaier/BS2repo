@@ -148,7 +148,7 @@ namespace _14ÜbungSublierung
                     return word;
                 }
 
-                //Aufgabe 2 
+                //task 2 same words
                 static Dictionary<string, int> CountSameWords(string path)
                 {
                     Dictionary<string, int> tmpDict = new Dictionary<string, int>();
@@ -168,12 +168,61 @@ namespace _14ÜbungSublierung
                     }
                     return null;
                 }
-
                 SameWords = CountSameWords(path);
+
+                CreateIndex(path);
+
+                //task 2.1 in wich lines of the txt can we find a certain word
+                static Dictionary<string, List<int>> CreateIndex(string path)
+                {
+                    string[] tmpwords = GetWords(GetTextFromFile(path));
+
+                    List<int> tmpList = AllIndexesOfString(GetTextFromFile(path), " die ");
+
+                    //finds all index of the 
+                    static List<int> AllIndexesOfString(string str, string value)
+                    {                        
+                        List<int> indexes = new List<int>();
+                        for (int index = 0; ; index += value.Length)
+                        {
+                            index = str.IndexOf(value, index);
+                            if (index == -1)
+                                return indexes;
+                            indexes.Add(index);
+                        }
+                    }
+
+
+                    int tmp = Regex.Matches(GetTextFromFile(path), "\n").Count;
+                    //array mit den "end inexes" of the lines so we have to check form last to next,
+                    //until -1 (end of file)
+                    int[] arrEndIndex = new int[tmp+1];
+                    for (int i = 0; i < tmp; i++)
+                    {
+                        if (i == 0)
+                        {
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i] + 1)) - i;
+                        }
+                        else
+                        {
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i-1] + 1)) - i;
+                        }
+
+                    }
+
+                    foreach (var tmpItem in tmpList)
+                    {
+                        foreach (var v in arrEndIndex)
+                        {
+                        }
+                    }
+
+                    return null;
+                }
 
                 return GetWords(GetTextFromFile(path)).Length;
             }
-            
+                        
             static int CountLetters(string path)
             {
                 string tmp = GetTextFromFile(path);
