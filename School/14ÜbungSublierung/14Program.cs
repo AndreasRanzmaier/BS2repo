@@ -170,56 +170,89 @@ namespace _14ÜbungSublierung
                 }
                 SameWords = CountSameWords(path);
 
-                CreateIndex(path);
 
                 //task 2.1 in wich lines of the txt can we find a certain word
+                string word = "die";
+                CreateIndex(path);
+
                 static Dictionary<string, List<int>> CreateIndex(string path)
                 {
-                    string[] tmpwords = GetWords(GetTextFromFile(path));
+                    string[] tmpwords = GetWords(GetTextFromFile(path));                    
+                    string[] tmpWorsWithoutSame = RemoveDuplicates(tmpwords);
 
-                    List<int> tmpList = AllIndexesOfString(GetTextFromFile(path), " die ");
+                    static string[] RemoveDuplicates(string[] s)
+                    {
+                        HashSet<string> set = new HashSet<string>(s);
+                        string[] result = new string[set.Count];
+                        set.CopyTo(result);
+                        return result;
+                    }
 
-                    //finds all index of the 
-                    static List<int> AllIndexesOfString(string str, string value)
+                    //finds all index of a word in text 
+                    static List<int> AllIndexesOfString(string gesText, string zuSuchenderString)
                     {                        
                         List<int> indexes = new List<int>();
-                        for (int index = 0; ; index += value.Length)
+                        for (int index = 0; ; index += zuSuchenderString.Length)
                         {
-                            index = str.IndexOf(value, index);
+                            index = gesText.IndexOf(zuSuchenderString, index);
                             if (index == -1)
                                 return indexes;
                             indexes.Add(index);
                         }
                     }
-
-
+                    
                     int tmp = Regex.Matches(GetTextFromFile(path), "\n").Count;
+
                     //array mit den "end inexes" of the lines so we have to check form last to next,
-                    //until -1 (end of file)
                     int[] arrEndIndex = new int[tmp+1];
-                    for (int i = 0; i < tmp; i++)
+                    int i = 0;
+                    for ( i = 0; i < tmp; i++)
                     {
                         if (i == 0)
                         {
-                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i] + 1)) - i;
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i] + 1)) ;
                         }
                         else
                         {
-                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i-1] + 1)) - i;
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i-1] + i)) - i;
+
                         }
-
+                        
                     }
-
-                    foreach (var tmpItem in tmpList)
+                    if (arrEndIndex[i] == 0)
                     {
-                        foreach (var v in arrEndIndex)
-                        {
-                        }
+                        arrEndIndex[i] = GetTextFromFile(path).Length - i + 1;
+
                     }
 
-                    return null;
-                }
+                    Dictionary<string, List<int>> resultdict = new Dictionary<string, List<int>>();
 
+                    //über alle wörter
+                    for (int j = 0; j < tmpWorsWithoutSame.Length; j++)
+                    {
+                        List<int> tmpList = AllIndexesOfString(GetTextFromFile(path), tmpWorsWithoutSame[j] );
+                        List<int> resultWordIndex = new List<int>();
+                        //schaut alle indize durch
+                        foreach (var x in tmpList)
+                        {
+                            for (int k = 0; k < arrEndIndex.Length; k++)
+                            {
+                                if (k <= arrEndIndex[k])
+                                {
+                                    resultWordIndex.Add(k);
+                                    break;
+                                }
+                            }
+                        }
+
+                        resultdict.Add(tmpWorsWithoutSame[j], resultWordIndex);
+                    }
+                    //erstellen der List für die anzahl / zeilen des Wortes
+                    List<int> tmpListZeilen = new List<int>();
+                 
+                    return resultdict;
+                }
+                               
                 return GetWords(GetTextFromFile(path)).Length;
             }
                         
