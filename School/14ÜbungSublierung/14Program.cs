@@ -216,10 +216,10 @@ namespace _14ÜbungSublierung
                         else
                         {
                             arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i-1] + i)) - i;
-
-                        }
-                        
+                        }                        
                     }
+
+                    //
                     if (arrEndIndex[i] == 0)
                     {
                         arrEndIndex[i] = GetTextFromFile(path).Length - i + 1;
@@ -245,7 +245,6 @@ namespace _14ÜbungSublierung
                                 }
                             }
                         }
-
                         resultdict.Add(tmpWorsWithoutSame[j], resultWordIndex);
                     }
                     //erstellen der List für die anzahl / zeilen des Wortes
@@ -259,6 +258,7 @@ namespace _14ÜbungSublierung
                         
             static int CountLetters(string path)
             {
+                
                 string tmp = GetTextFromFile(path);
 
                 string str =  RemoveSpecialChr(tmp);
