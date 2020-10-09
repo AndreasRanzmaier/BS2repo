@@ -1205,25 +1205,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\zmoad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\14Dictionary.csproj",
+      "projectUniqueName": "C:\\Users\\zmoad\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\14Dictionary.csproj",
       "projectName": "14Dictionary",
-      "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\14Dictionary.csproj",
-      "packagesPath": "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\obj\\",
+      "projectPath": "C:\\Users\\zmoad\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\14Dictionary.csproj",
+      "packagesPath": "C:\\Users\\zmoad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zmoad\\Source\\Repos\\AndreasRanzmaier\\BS_repo\\School\\14ÜbungSublierung\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Andreas.Ranzmaier\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\zmoad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

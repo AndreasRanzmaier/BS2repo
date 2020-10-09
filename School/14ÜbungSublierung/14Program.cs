@@ -92,7 +92,7 @@ namespace _14ÜbungSublierung
         {
             {
                 //txt file muss mit utf-8 BOM gespeichert sein 
-                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile3.txt";
+                string datei = @"C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile3.txt";
 
                 if (File.Exists(datei))
                 {

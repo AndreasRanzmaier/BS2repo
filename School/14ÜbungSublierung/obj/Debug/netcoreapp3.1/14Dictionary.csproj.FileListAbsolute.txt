@@ -11,3 +11,16 @@ C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcore
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.dll
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.pdb
 C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.genruntimeconfig.cache
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.exe
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.deps.json
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.runtimeconfig.json
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.runtimeconfig.dev.json
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.dll
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\bin\Debug\netcoreapp3.1\14Dictionary.pdb
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.csprojAssemblyReference.cache
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.AssemblyInfoInputs.cache
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.AssemblyInfo.cs
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.dll
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.pdb
+C:\Users\zmoad\Source\Repos\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\obj\Debug\netcoreapp3.1\14Dictionary.genruntimeconfig.cache
