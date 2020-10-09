@@ -91,12 +91,13 @@ namespace _14ÜbungSublierung
         static void Dict03()
         {
             {
-                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile2.txt";
+                //txt file muss mit utf-8 BOM gespeichert sein 
+                string datei = @"C:\GIT_repo\AndreasRanzmaier\BS_repo\School\14ÜbungSublierung\TextFile3.txt";
 
                 if (File.Exists(datei))
                 {
                     Console.WriteLine("Zeilen: " + CountLines(datei));
-                    Console.WriteLine("Wörter: " + CountWords(datei));
+                    Console.WriteLine("Wörter: " + CountWords(datei, out Dictionary<string, int> SameWords));
                     Console.WriteLine("Buzchstaben: " + CountLetters(datei));
                     AusgabeBstrPunkte(datei);
                 }
@@ -114,6 +115,7 @@ namespace _14ÜbungSublierung
                 Console.WriteLine("Punkte: " + tmparr[0]);
                 Console.WriteLine("Beistriche: " + tmparr[1]);
             }
+
             static int CountLines(string path)
             {
                 string st = GetTextFromFile(path);
@@ -122,7 +124,8 @@ namespace _14ÜbungSublierung
                 return numLines;
             }
 
-            static int CountWords(string path)
+            //todo: not working 
+            static int CountWords(string path, out Dictionary<string, int> SameWords)
             {
                 static string[] GetWords(string input)
                 {
@@ -134,7 +137,7 @@ namespace _14ÜbungSublierung
 
                     return words.ToArray();
                 }
-
+             
                 static string TrimSuffix(string word)
                 {
                     int apostropheLocation = word.IndexOf('\'');
@@ -146,9 +149,114 @@ namespace _14ÜbungSublierung
                     return word;
                 }
 
+                //task 2 same words
+                static Dictionary<string, int> CountSameWords(string path)
+                {
+                    Dictionary<string, int> tmpDict = new Dictionary<string, int>();
+                    string[] tmp = GetWords(GetTextFromFile(path));
+                    foreach (var tmpName in tmp)
+                    {                     
+                        if (!tmpDict.ContainsKey(tmpName))
+                        {
+                            //ist das wort nicht vorhanden wird es angelegt 
+                            tmpDict.Add(tmpName, 1);
+                        }
+                        else
+                        {
+                            //ist es schon vorhanden wird er erhöht
+                            tmpDict[tmpName]++;
+                        }
+                    }
+                    return null;
+                }
+                SameWords = CountSameWords(path);
+
+
+                //task 2.1 in wich lines of the txt can we find a certain word
+                //string word = "die";
+                CreateIndex(path);
+
+                static Dictionary<string, List<int>> CreateIndex(string path)
+                {
+                    string[] tmpwords = GetWords(GetTextFromFile(path));                    
+                    string[] tmpWorsWithoutSame = RemoveDuplicates(tmpwords);
+
+                    static string[] RemoveDuplicates(string[] s)
+                    {
+                        HashSet<string> set = new HashSet<string>(s);
+                        string[] result = new string[set.Count];
+                        set.CopyTo(result);
+                        return result;
+                    }
+
+                    //finds all index of a word in text 
+                    static List<int> AllIndexesOfString(string gesText, string zuSuchenderString)
+                    {                        
+                        List<int> indexes = new List<int>();
+                        for (int index = 0; ; index += zuSuchenderString.Length)
+                        {
+                            index = gesText.IndexOf(zuSuchenderString, index);
+                            if (index == -1)
+                                return indexes;
+                            indexes.Add(index);
+                        }
+                    }
+                    
+                    int tmp = Regex.Matches(GetTextFromFile(path), "\n").Count;
+
+                    //array mit den "end inexes" of the lines so we have to check form last to next,
+                    int[] arrEndIndex = new int[tmp+1];
+                    int i = 0;
+                    for ( i = 0; i < tmp; i++)
+                    {
+                        if (i == 0)
+                        {
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i] + 1)) ;
+                        }
+                        else
+                        {
+                            arrEndIndex[i] = (GetTextFromFile(path).IndexOf("\n", arrEndIndex[i-1] + i)) - i;
+
+                        }
+                        
+                    }
+                    if (arrEndIndex[i] == 0)
+                    {
+                        arrEndIndex[i] = GetTextFromFile(path).Length - i + 1;
+
+                    }
+
+                    Dictionary<string, List<int>> resultdict = new Dictionary<string, List<int>>();
+
+                    //über alle wörter
+                    for (int j = 0; j < tmpWorsWithoutSame.Length; j++)
+                    {
+                        List<int> tmpList = AllIndexesOfString(GetTextFromFile(path), tmpWorsWithoutSame[j] );
+                        List<int> resultWordIndex = new List<int>();
+                        //schaut alle indize durch
+                        foreach (var x in tmpList)
+                        {
+                            for (int k = 0; k < arrEndIndex.Length; k++)
+                            {
+                                if (k <= arrEndIndex[k])
+                                {
+                                    resultWordIndex.Add(k);
+                                    break;
+                                }
+                            }
+                        }
+
+                        resultdict.Add(tmpWorsWithoutSame[j], resultWordIndex);
+                    }
+                    //erstellen der List für die anzahl / zeilen des Wortes
+                    List<int> tmpListZeilen = new List<int>();
+                 
+                    return resultdict;
+                }
+                               
                 return GetWords(GetTextFromFile(path)).Length;
             }
-
+                        
             static int CountLetters(string path)
             {
                 string tmp = GetTextFromFile(path);
@@ -202,9 +310,7 @@ namespace _14ÜbungSublierung
                     }
                 }
                 return tmpstringarr;
-            }
-
-            
+            }            
         }
     }
 }

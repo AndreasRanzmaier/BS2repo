@@ -173,7 +173,7 @@ namespace _14ÜbungSublierung
 
 
                 //task 2.1 in wich lines of the txt can we find a certain word
-                string word = "die";
+                //string word = "die";
                 CreateIndex(path);
 
                 static Dictionary<string, List<int>> CreateIndex(string path)
