@@ -124,6 +124,7 @@ namespace _14ÜbungSublierung
                 return numLines;
             }
 
+            //todo: not working 
             static int CountWords(string path, out Dictionary<string, int> SameWords)
             {
                 static string[] GetWords(string input)
