@@ -46,7 +46,7 @@ from person;
 insert into beruf(ber_name) values ("Schueler"), ("Lehrer"), ("Direktor");
 
 -- d) wie c) Attribute in belibiger Reihenfolge angeben 
-insert into person_has_beruf(ber_id, per_id) value (3,1), (1,2), (2,3);
+insert into person_has_beruf(ber_id, per_id) value (3,75), (1,76), (2,77);
 
 -- hier dann die referenzielle integrität überprüfen 
 

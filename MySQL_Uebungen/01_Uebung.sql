@@ -65,10 +65,10 @@ show create table person;
 describe person;
 
 -- datensatz attribute einfügen
-insert into person values 	(null, "Oliver", "Bauer"),
-							(null, "Hannes", "Huspek"),
-							(null, "Jakob", "Schmidt"),
-							(null, "Martha", "Huber");
+insert into person values 	(null, "Oliver", "Bauer",null),
+							(null, "Hannes", "Huspek",null),
+							(null, "Jakob", "Schmidt",null),
+							(null, "Martha", "Huber",null);
 -- Query: Abfrage auf Tabellen einfaches select Statement 
 select * 
 from person;
