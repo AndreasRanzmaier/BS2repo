@@ -48,4 +48,71 @@ add				constraint fk_beruf_berid foreign key(ber_id)
 				references beruf(ber_id);
  
 select * from person;
+show create table person;
+/*'person', 'CREATE TABLE `person` 
+(\n  `per_geburt` date DEFAULT NULL,\n  
+`per_id` int NOT NULL AUTO_INCREMENT,\n 
+ `per_vorname` varchar(45) DEFAULT NULL,\n
+ `per_nachname` varchar(45) NOT NULL,\n  
+ `per_status` tinyint(1) DEFAULT \'1\',\n 
+ `per_nickname` varchar(20) NOT NULL,\n  
+ `ber_id` int NOT NULL,\n  PRIMARY KEY (`per_id`),\n 
+ KEY `fk_beruf_berid` (`ber_id`),\n 
+ CONSTRAINT `fk_beruf_berid` FOREIGN KEY (`ber_id`) REFERENCES `beruf` (`ber_id`)\n)
+ ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8'
+*/
+
+-- man könnte auch einen Primary key hinzufügen 
+
+-- Modify Attributeigenschaften ändern 
+-- f) person datentyp von per_geburt auf Datetime ändern
+alter table 	person 
+modify 			per_geburt datetime;
+
+-- g) person: per_nickname vor per_vorname "verschieben"
+alter table 	person 
+modify 			per_nickname varchar(20) not null after per_id; -- man muss immer einen Datentypen mitgeben 
+
+-- h) person: per_nickname nn wird auf optional geändert wenn nicht explizit angegeben
+alter table 	person
+modify 			per_nickname varchar(20);
+
+-- i) person: ber_id einen Default Wert hinzufügen 
+-- + ALTER
+alter table	 	person
+alter 			ber_id set default 1;
+
+-- auto_increment auf einen bestimmten Wert setzen 
+-- MUSS höher sein als der zuletzt eingefügt wert sein 
+-- j) person: per_id auto_increment auf 100 setzen 
+alter table 	person 
+				auto_increment = 100;
+
+-- DROP 
+-- k) person: per_status löschen 
+alter table 	person 
+drop			per_status;
+
+-- l) person: die Eigenschaft FK von ber_id entfernen 
+-- alter table 	person
+alter table 	person 
+drop 			foreign key fk_beruf_berid;
+
+-- change für table oä
+-- m) PERSONEN: per_geburt in per_geb_datum umbenennen 
+alter table		person 
+change 			per_geburt per_geb_datum datetime;
+
+-- rename für entity 
+-- RENAME
+-- n) Tabel person in personen umbenennen 
+alter table 	person 
+rename 			personen;
+
+show tables;
+
+-- und wieder zurückbenennen
+alter table 	personen 
+rename 			person;
+
 describe 		person;
