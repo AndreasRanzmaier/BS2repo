@@ -87,7 +87,8 @@ from 	person as p INNER JOIN person_has_beruf as pb using(per_id);
 
 -- alternativ falls PK und FK nicht die gleiche Bezeichnung haben 
 select 	p.*, ber_id 
-from 	person as p INNER JOIN person_has_beruf as pb
+from 	person as p 
+INNER JOIN person_has_beruf as pb 
 		on p.per_id = pb.per_id;
 		
 -- h) wie f) 

@@ -60,3 +60,10 @@ select * from preisebenutzung;
 /*
 NATURAL JOIN:
 */
+
+-- DBSCHULE
+-- o) Tabelle erstellen und danach löschen 
+create table test (tid int);
+show tables;
+drop table if exists test;
+

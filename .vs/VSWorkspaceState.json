@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\BSc#",
+    "\\Personal",
+    "\\Personal\\3SudokuSolver",
     "\\School"
   ],
-  "SelectedNode": "\\School\\01Intro",
+  "SelectedNode": "\\Personal\\3SudokuSolver\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
