@@ -1,0 +1,7 @@
+Schreiben sie eine Klasse Person 
+Members : Vorname und private Alter
+Einen Default Konstruktor zur initialisierung 
+aller Members  
+Einen überladenen Konstruktor zu
+Intialisierung der Mambers duch 
+Benutzereingaben 

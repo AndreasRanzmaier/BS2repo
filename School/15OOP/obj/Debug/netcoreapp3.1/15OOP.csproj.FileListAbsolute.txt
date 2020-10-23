@@ -1,0 +1,13 @@
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.exe
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.deps.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.runtimeconfig.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.runtimeconfig.dev.json
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\bin\Debug\netcoreapp3.1\15OOP.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.csprojAssemblyReference.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.AssemblyInfoInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.AssemblyInfo.cs
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.csproj.CoreCompileInputs.cache
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.dll
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.pdb
+C:\GIT_repo\AndreasRanzmaier\BS_repo\School\15OOP\obj\Debug\netcoreapp3.1\15OOP.genruntimeconfig.cache
