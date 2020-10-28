@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16Methoden\\16Methoden.csproj",
+      "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16MethodenPerson\\16Methoden.csproj",
       "projectName": "16Methoden",
-      "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16Methoden\\16Methoden.csproj",
+      "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16MethodenPerson\\16Methoden.csproj",
       "packagesPath": "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16Methoden\\obj\\",
+      "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\16MethodenPerson\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

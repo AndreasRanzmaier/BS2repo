@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.WebSockets;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 
 namespace _15OOP
@@ -11,11 +12,19 @@ namespace _15OOP
             //Room
             {
                 Room raum1 = new Room();
-                //raum1.width = 9;                
-                Room r2 = new Room(4, 3);
-                Console.WriteLine(r2.width);
 
-                Console.WriteLine(r2.height);
+                Room raum2 = new Room(4, 3);
+
+                raum2.RoomMultiply(out int erg);
+                Console.WriteLine("m^2 = " + erg);
+
+                //Array einer Klasse 
+                Room[] r3 = new Room[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    r3[i] = new Room();
+                }
+                Console.WriteLine("DefaultKonstruktor wurde: " + Room.countRoom + "");
             }
 
             //Person
@@ -35,32 +44,31 @@ namespace _15OOP
     }
     class Room
     {
-        //im main sichtbar
+        // Im main sichtbar
         public int width = 0;
 
-        //nicht im main sichtbar 
+        // Nicht im main sichtbar 
         public int height = 0;
 
-        /* konstruktor 1
-         * Default ÜBERSCHREIBEN 
-         * die Schnittselle ist gleich (kein überladen)             
-         */
+        // Wird nur 1. Initialisiert egal wieviele instanzen es gibt
+        public static int countRoom = 0; 
+      
+        // Default
         public Room()
         {
-            width = 15;
-            height = 20;
+            width = 0;
+            height = 0;
+            countRoom ++;
         }
-
-        /*
-          ÜBERLADEN 
-         */
+        
+        // Overload
         public Room(int width, int height)
         {
             this.width = width;
             this.height = height;
         }
 
-        /*Getter und Setter Methoden*/
+        // Getter und Setter Methoden
         public int Height
         {
             get
@@ -83,9 +91,16 @@ namespace _15OOP
             }
         }
 
+        // Methode 
         public void PrintMembers()
         {
             Console.WriteLine("Raum: " + this.width + ", " + this.height);
+        }
+
+        //
+        public void RoomMultiply (out int erg)
+        {
+            erg = this.width * this.height;
         }
     }
 
