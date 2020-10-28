@@ -7,6 +7,10 @@ namespace _16Methoden
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
+
             // Bsp 1)
             Person Person1 = new Person();
             Person1.AusgabeNamen();
