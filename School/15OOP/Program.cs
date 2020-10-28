@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.WebSockets;
+using System.Security.Cryptography;
 
 namespace _15OOP
 {
@@ -9,68 +11,101 @@ namespace _15OOP
             //Room
             {
                 Room raum1 = new Room();
-                //raum1.width = 9;
-                //jajaj
+                //raum1.width = 9;                
                 Room r2 = new Room(4, 3);
                 Console.WriteLine(r2.width);
+
+                Console.WriteLine(r2.height);
             }
 
             //Person
-            string a = Console.ReadLine();
-            int b = Convert.ToInt32(Console.ReadLine());
-            Person p1 = new Person(a,b);
+            {
+                //Person
+                string a = Console.ReadLine();
+                int b = Convert.ToInt32(Console.ReadLine());
+                Person p1 = new Person(a, b);
 
-            Console.WriteLine(p1.VName);
-            Console.WriteLine(p1.Alter);
+                Console.WriteLine(p1.VName);
+                Console.WriteLine(p1.Alter);
+            }
+
         }
 
-        class Room
+        
+    }
+    class Room
+    {
+        //im main sichtbar
+        public int width = 0;
+
+        //nicht im main sichtbar 
+        public int height = 0;
+
+        /* konstruktor 1
+         * Default ÜBERSCHREIBEN 
+         * die Schnittselle ist gleich (kein überladen)             
+         */
+        public Room()
         {
-            //standardmäßig ist private 
+            width = 15;
+            height = 20;
+        }
 
-            // im main sichtbar
-            public int width = 0;
+        /*
+          ÜBERLADEN 
+         */
+        public Room(int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+        }
 
-            //nicht im main sichtbar 
-            public int height = 0;
-
-            /* konstruktor 1
-             * Default ÜBERSCHREIBEN 
-             * die Schnittselle ist gleich (kein überladen)             
-             */
-            public Room()
+        /*Getter und Setter Methoden*/
+        public int Height
+        {
+            get
             {
-                width = 15;
-                height = 20;
+                return this.height;
             }
-
-            /*
-              ÜBERLADEN 
-             */
-            public Room(int width, int height)
+            set
             {
-                this.width = width;
-                this.height = height;
+                if (value < 50)
+                {
+
+                }
+                else
+                {
+                    this.height = value;    // setzt den wert auch im Public 
+                                            // wie ref in einer funktion       
+                }
+
+
             }
         }
 
-        class Person
+        public void PrintMembers()
         {
-            public string VName = "";
-            public int Alter = 0;
+            Console.WriteLine("Raum: " + this.width + ", " + this.height);
+        }
+    }
 
-            public Person()
-            {
-                VName = "Muster";
-                Alter = 18;
-            }
+    class Person
+    {
+        public string VName = "";
+        public int Alter = 0;
 
-            public Person(string VName, int Alter)
-            {
-                this.VName = VName;
-                this.Alter = Alter;
+        //
+        public Person()
+        {
+            VName = "Muster";
+            Alter = 18;
+        }
 
-            }
+        public Person(string VName, int Alter)
+        {
+            this.VName = VName;
+            this.Alter = Alter;
+
         }
     }
 }
