@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Personal",
-    "\\School"
+    "\\School",
+    "\\School\\16MethodenPerson"
   ],
-  "SelectedNode": "\\School\\16MethodenPerson",
+  "SelectedNode": "\\School\\16MethodenPerson\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
