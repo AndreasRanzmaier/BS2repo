@@ -70,4 +70,3 @@ namespace _18Class
         //GET SET
         //METHODEN
     }
-}

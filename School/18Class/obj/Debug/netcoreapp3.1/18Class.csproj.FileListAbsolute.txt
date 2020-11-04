@@ -1,0 +1,12 @@
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.exe
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.deps.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.runtimeconfig.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.runtimeconfig.dev.json
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.dll
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\bin\Debug\netcoreapp3.1\18Class.pdb
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.AssemblyInfoInputs.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.AssemblyInfo.cs
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.csproj.CoreCompileInputs.cache
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.dll
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.pdb
+C:\Users\Ryzen\Source\Repos\AndreasRanzmaier\BS_repo\School\18Class\obj\Debug\netcoreapp3.1\18Class.genruntimeconfig.cache

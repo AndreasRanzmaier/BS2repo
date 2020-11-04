@@ -16,6 +16,7 @@ namespace _14ÜbungSublierung
             Dict03();
         }
 
+        //bsp 1
         static void Dict01()
         {
             string[] arr = { "Hugo", "Franz", "Paul", "Hugo", "Mavin", "Peter", "Franz" };
