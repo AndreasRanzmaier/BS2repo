@@ -1,12 +1,16 @@
-﻿using System;
-//using System.Runtime.Serialization.Formatters;
+﻿// Sudoku Solver | KonsoleApp | Andreas Ranzmaier | 27.12.2020 
+// inspirations:
+// https://www.sudokuwiki.org/sudoku.htm 
+// https://www.youtube.com/watch?v=G_UYXzGuqvM&ab_channel=Computerphile
+
+using System;
+using System.Runtime.Serialization.Formatters;
 
 namespace _3SudokuSolver
 {
-    // https://www.sudokuwiki.org/sudoku.htm  
+     
     class Program
     {
-        //todo asdf
         static void Main(string[] args)
         {
             int row1 = 9;
@@ -14,10 +18,16 @@ namespace _3SudokuSolver
             int[,] SudokuField = new int[row1, collumn1];
 
             string OneLiner = "010000030000000800026009000000107060900300001000000057100080005390050080050690000";
-            generateOfString(OneLiner);
+            generateArrayOfString(OneLiner);
+
             display(SudokuField);
 
+
             solve();
+
+            display(SudokuField);
+
+
             //todo: wenn mehrere Lösungen vorhanden werden diese nicht angezeigt 
             //
 
@@ -46,9 +56,7 @@ namespace _3SudokuSolver
                                 {
                                     // ist möglich kann aber falsch sein 
                                     //todo: visualisierung 
-                                    Console.Clear();
                                     SudokuField[i, j] = n; //one free square less
-                                    display(SudokuField);
 
                                     solve();
 
@@ -76,7 +84,7 @@ namespace _3SudokuSolver
             }
 
             //generate array from sudoku string 
-            void generateOfString(string OnLine)
+            void generateArrayOfString(string OnLine)
             {
                 int x = 0;
 

@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {}
+    "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {}
   },
   "projects": {
-    "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {
+    "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+        "projectUniqueName": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
         "projectName": "3SudokuSolver",
-        "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
-        "packagesPath": "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
+        "projectPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+        "packagesPath": "C:\\Users\\ranzm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Andreas.Ranzmaier\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ranzm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
