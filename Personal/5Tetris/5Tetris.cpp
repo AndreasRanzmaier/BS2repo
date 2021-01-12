@@ -4,8 +4,11 @@
 
 #include <iostream>
 using namespace std;
-
+// ----------- Variables -------------
 wstring tetromino[7];
+
+// ----------- Methodes --------------
+int Rotate(int px, int py, int r);
 
 int main()
 {
@@ -36,22 +39,32 @@ int main()
 		tetromino[4].append(L"..X.");
 		tetromino[4].append(L"....");
 
-		tetromino[5].append(L".X..");
+		tetromino[5].append(L"..X.");
+		tetromino[5].append(L"..X.");
 		tetromino[5].append(L".XX.");
-		tetromino[5].append(L".X..");
 		tetromino[5].append(L"....");
 
-		tetromino[6].append(L"..X.");
-		tetromino[6].append(L"..X.");
+		tetromino[6].append(L".X..");
+		tetromino[6].append(L".X..");
 		tetromino[6].append(L".XX.");
 		tetromino[6].append(L"....");
-
-		tetromino[7].append(L".X..");
-		tetromino[7].append(L".X..");
-		tetromino[7].append(L".XX.");
-		tetromino[7].append(L"....");
 	}
 
+	int temp = Rotate(4, 4, 3);
+	cout << temp;
+
+	
 }
 
+int Rotate(int px, int py, int r) 
+{
+	switch (r%4)
+	{
+		case 0: return py * 4 + px;			// 0 deg
+		case 1: return 12 + py - (px * 4);	// 90 deg
+		case 2: return 15 - (py * 4) - px;	// 180 deg
+		case 3: return 3 - py + (px *4);	// 270 deg
+	}
+	return 0;
+}
 
