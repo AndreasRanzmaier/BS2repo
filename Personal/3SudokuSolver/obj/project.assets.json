@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+      "projectUniqueName": "C:\\GIT_repos\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
       "projectName": "3SudokuSolver",
-      "projectPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
+      "projectPath": "C:\\GIT_repos\\BS_repo\\Personal\\3SudokuSolver\\3SudokuSolver.csproj",
       "packagesPath": "C:\\Users\\ranzm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ranzm\\source\\repos\\AndreasRanzmaier\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
+      "outputPath": "C:\\GIT_repos\\BS_repo\\Personal\\3SudokuSolver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ranzm\\AppData\\Roaming\\NuGet\\NuGet.Config",
