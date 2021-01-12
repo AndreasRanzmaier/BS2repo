@@ -37,3 +37,16 @@ C:\GIT_repo\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp
 C:\GIT_repo\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.dll
 C:\GIT_repo\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.pdb
 C:\GIT_repo\AndreasRanzmaier\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.genruntimeconfig.cache
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.exe
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.deps.json
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.runtimeconfig.json
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.runtimeconfig.dev.json
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.dll
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\bin\Debug\netcoreapp3.1\3SudokuSolver.pdb
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.csprojAssemblyReference.cache
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.AssemblyInfoInputs.cache
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.AssemblyInfo.cs
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.csproj.CoreCompileInputs.cache
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.dll
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.pdb
+C:\GIT_repos\BS_repo\Personal\3SudokuSolver\obj\Debug\netcoreapp3.1\3SudokuSolver.genruntimeconfig.cache

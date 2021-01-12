@@ -8,25 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\ranzm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\03Arbeitsaufdrag_Draw_Charakter.csproj",
+      "projectUniqueName": "C:\\GIT_repos\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\03Arbeitsaufdrag_Draw_Charakter.csproj",
       "projectName": "03Arbeitsaufdrag_Draw_Charakter",
-      "projectPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\03Arbeitsaufdrag_Draw_Charakter.csproj",
-      "packagesPath": "C:\\Users\\Andreas.Ranzmaier\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\obj\\",
+      "projectPath": "C:\\GIT_repos\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\03Arbeitsaufdrag_Draw_Charakter.csproj",
+      "packagesPath": "C:\\Users\\ranzm\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT_repos\\BS_repo\\School\\03Arbeitsaufdrag_Draw_Charakter\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Andreas.Ranzmaier\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ranzm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

@@ -2,19 +2,29 @@
 //
 
 #include <iostream>
+#include <string>
+
+//======================= GLOBAL VARIABLES ========================
+const int row1 = 9;
+const int collumn1 = 9;
+int SudokuField[row1][collumn1];
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::string OneLiner = "010000030000000800026009000000107060900300001000000057100080005390050080050690000";
+    int c = SudokuField[9][9];
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+bool Possible(int Row, int Collumn, int TryNumber)
+{
+    //find all the row numbers 
+    for (int i = 0; i < row1; i++)
+    {
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    }
+}
+
+
+
+
