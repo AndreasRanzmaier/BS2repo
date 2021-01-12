@@ -22,15 +22,11 @@ namespace _3SudokuSolver
 
             display(SudokuField);
 
-
             solve();
 
             display(SudokuField);
 
-
             //todo: wenn mehrere Lösungen vorhanden werden diese nicht angezeigt 
-            //
-
 
             Console.ReadKey();
 
