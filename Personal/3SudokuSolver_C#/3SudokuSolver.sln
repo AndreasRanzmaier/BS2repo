@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3SudokuSolver", "3SudokuSolver.csproj", "{E0EDA075-B858-4520-8EC6-13FA9853704F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SudokuSolverTester", "..\SudokuSolverTester\SudokuSolverTester.vcxproj", "{B16A58C4-A9C3-474C-A264-6130D1B67A1E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,16 +27,6 @@ Global
 		{E0EDA075-B858-4520-8EC6-13FA9853704F}.Release|x64.Build.0 = Release|Any CPU
 		{E0EDA075-B858-4520-8EC6-13FA9853704F}.Release|x86.ActiveCfg = Release|Any CPU
 		{E0EDA075-B858-4520-8EC6-13FA9853704F}.Release|x86.Build.0 = Release|Any CPU
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Debug|x64.ActiveCfg = Debug|x64
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Debug|x64.Build.0 = Debug|x64
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Debug|x86.ActiveCfg = Debug|Win32
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Debug|x86.Build.0 = Debug|Win32
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Release|Any CPU.ActiveCfg = Release|Win32
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Release|x64.ActiveCfg = Release|x64
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Release|x64.Build.0 = Release|x64
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Release|x86.ActiveCfg = Release|Win32
-		{B16A58C4-A9C3-474C-A264-6130D1B67A1E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

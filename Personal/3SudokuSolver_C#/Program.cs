@@ -130,7 +130,6 @@ namespace _3SudokuSolver
             bool Possible(int Row, int Collumn, int tryNumber)
             {
                 //cant put a number somewhere if there already is one
-
                 //find all the row numbers
                 for (int i = 0; i < row1; i++)
                 {
