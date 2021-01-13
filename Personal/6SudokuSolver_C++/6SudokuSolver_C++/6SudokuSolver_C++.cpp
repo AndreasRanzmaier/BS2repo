@@ -17,6 +17,7 @@ int determineHaus(int Row, int Collumn);
 void minxy(int haus, int& minx, int& miny);
 void generateArrayOfString(string OneLine);
 void solve();
+string generateStringOfArray();
 
 int main()
 {
@@ -25,10 +26,14 @@ int main()
 
 	solve();
 
+
 }
 
 // makes an string out of the array
+string generateStringOfArray()
+{
 
+}
 
 // solves the array with backtracking
 void solve()
@@ -118,7 +123,7 @@ bool Possible(int Row, int Collumn, int tryNumber)
 	return true;
 }
 
-//determinesthe 3x3 Field in wich the field to check is 
+// determinesthe 3x3 Field in wich the field to check is 
 int determineHaus(int Row, int Collumn)
 {
 	//ausgabe 1-9 je nach "Haus" also 3x3 kasten
@@ -176,7 +181,7 @@ int determineHaus(int Row, int Collumn)
 	}
 }
 
-//checks the haus and sends back its top left corner 
+// checks the haus and sends back its top left corner 
 void minxy(int haus, int& minx, int& miny)
 {
 	if (haus == 1)
@@ -226,7 +231,7 @@ void minxy(int haus, int& minx, int& miny)
 	}
 }
 
-//generate array from sudoku string 
+// generate array from sudoku string 
 void generateArrayOfString(string OneLine)
 {
 	int x = 0;
