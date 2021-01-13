@@ -26,13 +26,23 @@ int main()
 
 	solve();
 
-
+	string test = generateStringOfArray();
 }
 
 // makes an string out of the array
 string generateStringOfArray()
 {
-
+	string tmpstr;
+	for (int i = 0; i < row1; i++)
+	{
+		for (int ii = 0; ii < collumn1; ii++)
+		{
+		int tmpint = SudokuField[i][ii];
+		
+		tmpstr += to_string(tmpint);
+		}
+	}
+	return tmpstr;
 }
 
 // solves the array with backtracking
