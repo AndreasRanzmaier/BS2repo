@@ -2,6 +2,9 @@
 // Andreas Ranzmaier | 12.01.2021 | javidx9 followalong 
 // Reason is relearning c++ syntax and hopefully a broader understanding of Structure 
 
+// WIP
+
+
 #include <iostream>
 #include <Windows.h>
 
@@ -16,6 +19,8 @@ unsigned char* pField = nullptr;
 
 int nScreenWidth = 80;		// console Screensize X
 int nScreenHeight = 30;		// console Screensize Y
+
+int main();
 
 // ----------- Methodes --------------
 int Rotate(int px, int py, int r);
