@@ -1,5 +1,5 @@
-// SudokuSolverTester.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Andreas Ranzmaier | 14.01.2021 | port from my c# file functioning 
+// waiting to be made into an in delphi usable dll so i can make a grafikal representation out of it
 
 #include <iostream>
 #include <string>
