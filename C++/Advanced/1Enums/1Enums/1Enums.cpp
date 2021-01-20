@@ -6,7 +6,7 @@
 using namespace std;
 
 // ------------------------ Globale Variablen ------------------------
-enum class PlayerStatus
+enum PlayerStatus
 {
 	PS_Running,
 	PS_Walking, 
@@ -23,7 +23,7 @@ void UpdateMovementSpeed(PlayerStatus P_Status, float& speed);
 int main()
 {
 	float MovementSpeed;
-	PlayerStatus status = PlayerStatus::PS_Walking;
+	PlayerStatus status = PS_Walking;
 
 	UpdateMovementSpeed(status, MovementSpeed);
 	cout << "MS = " << MovementSpeed << endl;
@@ -35,13 +35,13 @@ void UpdateMovementSpeed(PlayerStatus P_Status, float& speed)
 {
 	switch (P_Status)
 	{
-	case PlayerStatus::PS_Running:
+	case PS_Running:
 		speed = RunSpeed;
 		break;
-	case PlayerStatus::PS_Crouching:
+	case PS_Crouching:
 		speed = WalkSpeed;
 		break;
-	case PlayerStatus::PS_Walking:
+	case PS_Walking:
 		speed = WalkSpeed;
 		break;
 	default:
