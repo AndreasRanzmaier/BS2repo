@@ -2,7 +2,17 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
+
+struct Container
+{
+	string name;
+
+	int x;
+	int y;
+	int z;
+};
 
 int main()
 {
@@ -31,6 +41,14 @@ int main()
 	cout << *arrPtr << endl; //pointing to 0
 	arrPtr++;
 	cout << *arrPtr << endl; //pointing to 1
+	
+	//pointer to struct 
+	Container container_ = { "Sam", 5, 6, 7 };
+
+	Container* PtrToCont = &container_; // carefull with the operater sequence
+
+	cout << (*PtrToCont).name << endl;
+	cout << PtrToCont->name << endl; // same thing (arrow are "POINTING" to things)
 
 
 	system("pause");
