@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Classes_Inheritance.cpp">
+    <ClCompile Include="Classes_Inheritance_more.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

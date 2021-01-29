@@ -16,7 +16,8 @@ public:
 	Creature()
 	{
 		cout << "Creature is born" << endl;
-
+		cout << "eyes= " << eyes << endl;
+		cout << "type = " << type << endl;
 	}
 
 
@@ -31,14 +32,17 @@ public:
 		cout << "A Spider is Born" << endl;
 		eyes = 8;
 		type = "achnophobe";
+
+		cout << "eyes= " << eyes << endl;
+		cout << "type = " << type << endl;
 	}
 	
 };
-
-int main()
-{
-	Spider Bob;
-
-	system("pause");
-}
+ 
+//int main()
+//{
+//	Spider Bob;
+//
+//	system("pause");
+//}
 
