@@ -13,7 +13,7 @@ public:
 		cout << "a creature has been created" << endl;
 		Health = 100.f;
 	}
-
+	
 	void SetName(string _Name)
 	{
 		Name = _Name;
@@ -43,7 +43,6 @@ public:
 		cout << "Health: " << GetHealth() << endl;
 	}
 
-
 private:
 	float Health;
 	string Name;
@@ -62,8 +61,6 @@ public:
 		NumberOfLimbs = 5;
 		SetName("Doby");
 	}
-
-
 };
 
 int main()
