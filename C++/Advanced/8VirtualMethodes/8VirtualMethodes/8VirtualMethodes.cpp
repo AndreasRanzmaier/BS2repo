@@ -22,7 +22,6 @@ public:
 	{
 		cout << "Actor Being Played Called" << endl;
 		Object::BeginPlay(); // and you can use the parent version
-		// 2012
 	}
 };
 

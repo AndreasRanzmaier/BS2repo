@@ -19,6 +19,7 @@ void generateArrayOfString(string OneLine);
 void solve();
 string generateStringOfArray();
 
+
 int main()
 {
 	string OneLiner = "010000030000000800026009000000107060900300001000000057100080005390050080050690000";
@@ -37,9 +38,9 @@ string generateStringOfArray()
 	{
 		for (int ii = 0; ii < collumn1; ii++)
 		{
-		int tmpint = SudokuField[i][ii];
-		
-		tmpstr += to_string(tmpint);
+			int tmpint = SudokuField[i][ii];
+
+			tmpstr += to_string(tmpint);
 		}
 	}
 	return tmpstr;
@@ -66,6 +67,7 @@ void solve()
 						//todo: visualisierung 
 						SudokuField[i][j] = n; //one free square less
 
+						// (solve in solve is here recursive backtracking)
 						solve();
 
 						//ausrechnen ob alle felder richtig belegt sind                                     
@@ -77,7 +79,7 @@ void solve()
 								full = full + SudokuField[x][y];
 							}
 						}
-						if (full == 405)
+						if (full == 405)// todo: 405 only works for 9x9
 						{
 							return;
 						}
@@ -94,8 +96,8 @@ void solve()
 // checks if a specific number could be Theoretically places in a given spot
 bool Possible(int Row, int Collumn, int tryNumber)
 {
-	//cant put a number somewhere if there already is one
-	//find all the row numbers
+	// cant put a number somewhere if there already is one
+	// find all the row numbers
 	for (int i = 0; i < row1; i++)
 	{
 		if (SudokuField[Row][i] == tryNumber)
@@ -136,8 +138,8 @@ bool Possible(int Row, int Collumn, int tryNumber)
 // determinesthe 3x3 Field in wich the field to check is 
 int determineHaus(int Row, int Collumn)
 {
-	//ausgabe 1-9 je nach "Haus" also 3x3 kasten
-	//147
+	// ausgabe 1-9 je nach "Haus" also 3x3 kasten
+	// 147
 	if (Row <= 2)
 	{
 		if (Collumn <= 2)
@@ -153,7 +155,8 @@ int determineHaus(int Row, int Collumn)
 			return 7;
 		}
 	}
-	//258
+
+	// 258
 	else if (Row > 2 && Row <= 5)
 	{
 		if (Collumn <= 2)
@@ -169,7 +172,8 @@ int determineHaus(int Row, int Collumn)
 			return 8;
 		}
 	}
-	//369
+
+	// 369
 	else if (Row > 5 && Row <= 8)
 	{
 		if (Collumn <= 2)
@@ -246,12 +250,13 @@ void generateArrayOfString(string OneLine)
 {
 	int x = 0;
 
-	//von [0,0] 
+	// von [0,0] 
 	for (int i = 0; i < row1; i++)
 	{
-		//bis [8,8]
+		// bis [8,8]
 		for (int j = 0; j < collumn1; j++)
 		{
+
 			string z = OneLine.substr(x, 1);
 			SudokuField[i][j] = stoi(z);
 			x++;
