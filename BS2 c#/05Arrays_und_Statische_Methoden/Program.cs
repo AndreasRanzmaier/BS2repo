@@ -86,7 +86,7 @@ namespace _05Arrays_und_Statische_Methoden
             //topo nichtmehr übergeben sondern in der ausgabe die längen rechnen ???
             outp_arr2D(arr2D, length2D_1, length2D_2);
 
-
+            testc(Int16 )
         }
 
         static void array2D_ungleich()
@@ -94,7 +94,7 @@ namespace _05Arrays_und_Statische_Methoden
             //um zu spezifizieren wieviele spalten eien reihe haben sollte ode umgekehrt
             //array mit fixer [x][] und variabler [][y]
 
-            Console.WriteLine("mehrdim dynamisches array");
+            Console.WriteLine("mehrdimensionales dynamisches array");
 
             //eingabe der längen
             int[][] arr2D = new int[2][];
