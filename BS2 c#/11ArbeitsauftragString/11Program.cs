@@ -7,11 +7,11 @@ namespace _11ArbeitsauftragString
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
+            //Console.BackgroundColor = ConsoleColor.White;
+            //Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
 
-            string datei = "C:\\GIT_repo\\AndreasRanzmaier\\BS_repo\\School\\11ArbeitsauftragString\\Text.txt";
+            string datei = "C:\\GIT_repos\\BS_repo\\BS2 C#\\11ArbeitsauftragString\\Text.txt";
 
             get_NotenschnittNames(out float[] arrNotenschnitt, out string[] arrNamen, get_Text_from_file(datei));
             print_Table(arrNotenschnitt, arrNamen);
@@ -85,8 +85,7 @@ namespace _11ArbeitsauftragString
                 if (xml[i] == ':')
                 {
                     j++;
-
-
+    
                     if (j == 1)
                     {
                         Namen[j - 1] = xml.Substring(0, i);

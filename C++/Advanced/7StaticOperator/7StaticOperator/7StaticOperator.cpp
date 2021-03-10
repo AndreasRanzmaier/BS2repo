@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void update_count();
+void update_count(); 
 void update_count_static();
 
 class Creature
@@ -22,8 +22,6 @@ public:
 
 	// can be called without any objects of that class *2
 	static void Speak() { cout << "hi" << endl; }
-
-
 };
 
 int main()
