@@ -52,16 +52,16 @@ namespace Mak_24._09._2020_RanzmaierAndreas
 
         static void GetArrayMemory()
         {
-            //eingabe zeilen
-            Console.Write("Zeilen: ");
-            int d1 = Convert.ToInt32(Console.ReadLine());
-
+            //eingabe zeilen 
+            Console.Write("Zeilen: "); 
+            int d1 = Convert.ToInt32(Console.ReadLine()); 
+             
             //eingabe spalten
-            Console.Write("Spalten: ");
+            Console.Write("Spalten: "); 
             int d2 = Convert.ToInt32(Console.ReadLine());
 
             int[,] arr = new int[d1, d2];
-            FillArray(arr);
+            FillArray(arr); 
         }
 
         static void FillArray(int[,] a)
@@ -81,11 +81,11 @@ namespace Mak_24._09._2020_RanzmaierAndreas
         {
             int[,] arrSumm = new int[a.GetLength(0), a.GetLength(1) + 1];
             for (int i = 0; i < a.GetLength(0); i++)
-            {
-                for (int j = 0; j < a.GetLength(1); j++)
+            { 
+                for (int j = 0; j < a.GetLength(1); j++) 
                 {
                     arrSumm[i, j] = a[i, j];
-                }
+                } 
             }
 
             //für alle zeilen 
@@ -110,6 +110,7 @@ namespace Mak_24._09._2020_RanzmaierAndreas
                 {
                     Console.Write(b[i, j] + " ");
                 }
+
                 Console.WriteLine("\n");
             }
         }
