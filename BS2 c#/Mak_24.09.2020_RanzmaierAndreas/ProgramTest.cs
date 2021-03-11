@@ -9,7 +9,7 @@ namespace Mak_24._09._2020_RanzmaierAndreas
     {
         static void Main(string[] args)
         {
-            Menue();   
+            Menue();
         }
 
         static void Menue()
@@ -42,26 +42,25 @@ namespace Mak_24._09._2020_RanzmaierAndreas
             }
             else
             {
-
-                //close application if input was 4
+                // close application if input was 4
                 Console.WriteLine("Auf Widersehen!");
                 return;
             }
-
         }
 
         static void GetArrayMemory()
         {
-            //eingabe zeilen 
-            Console.Write("Zeilen: "); 
-            int d1 = Convert.ToInt32(Console.ReadLine()); 
-             
-            //eingabe spalten
-            Console.Write("Spalten: "); 
+            // eingabe zeilen 
+            Console.Write("Zeilen: ");
+            int d1 = Convert.ToInt32(Console.ReadLine());
+
+            // eingabe spalten
+            Console.Write("Spalten: ");
             int d2 = Convert.ToInt32(Console.ReadLine());
 
+            // 
             int[,] arr = new int[d1, d2];
-            FillArray(arr); 
+            FillArray(arr);
         }
 
         static void FillArray(int[,] a)
@@ -81,11 +80,11 @@ namespace Mak_24._09._2020_RanzmaierAndreas
         {
             int[,] arrSumm = new int[a.GetLength(0), a.GetLength(1) + 1];
             for (int i = 0; i < a.GetLength(0); i++)
-            { 
-                for (int j = 0; j < a.GetLength(1); j++) 
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     arrSumm[i, j] = a[i, j];
-                } 
+                }
             }
 
             //für alle zeilen 
@@ -136,7 +135,6 @@ namespace Mak_24._09._2020_RanzmaierAndreas
                     //alles links 
                     arrI[j, 0] = '*';
                 }
-
                 drawArr2D(arrI);
             }
             else if (c == 'L')
