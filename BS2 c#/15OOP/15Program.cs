@@ -34,10 +34,7 @@ namespace _15OOP
                 Console.WriteLine(p1.VName);
                 Console.WriteLine(p1.Alter);
             }
-
         }
-
-        
     }
     class Room
     {
@@ -48,16 +45,16 @@ namespace _15OOP
         public int height = 0;
 
         // Wird nur 1. Initialisiert egal wieviele instanzen es gibt
-        public static int countRoom = 0; 
-      
+        public static int countRoom = 0;
+
         // Default
         public Room()
         {
             width = 0;
             height = 0;
-            countRoom ++;
+            countRoom++;
         }
-        
+
         // Overload
         public Room(int width, int height)
         {
@@ -83,8 +80,6 @@ namespace _15OOP
                     this.height = value;    // setzt den wert auch im Public 
                                             // wie ref in einer funktion       
                 }
-
-
             }
         }
 
@@ -94,8 +89,7 @@ namespace _15OOP
             Console.WriteLine("Raum: " + this.width + ", " + this.height);
         }
 
-        //
-        public void RoomMultiply (out int erg)
+        public void RoomMultiply(out int erg)
         {
             erg = this.width * this.height;
         }

@@ -24,32 +24,27 @@ void main() {
 
 	//== ->Vergleich
 	cout << "Sind die Zahlen gleich?" << endl;
-	bool areNumbersEqual = (number1 == number2);
-	bool areNumbersNotequal = (number1 != number2);
+	bool areNumbersEqual = (number1 == number2); 
+	bool areNumbersNotequal = (number1 != number2); 
 	
 	cout << "Sind die beiden zahlen unggleich?"<< endl;
-	
-
-	if (areNumbersEqual){
-
-	}
 
 
 	areNumbersNotequal != areNumbersEqual; //Not Operator
 
 	//comment abou Bool 
 	/*bool a b Vergleiche
+	 
+	a b && || !a  (a||b)&&!a      ^ 
+	0 0 0  0  1	   0       1=0	  0 
+	1 0 0  1  0    1       0=0    1 
+	0 1 0  1  1    1       1=1    1 
+	1 1 1  1  0    1       0=0    0 
 
-	a b && || !a  (a||b)&&!a      ^
-	0 0 0  0  1	   0       1=0	  0
-	1 0 0  1  0    1       0=0    1
-	0 1 0  1  1    1       1=1    1
-	1 1 1  1  0    1       0=0    0
-
-	a==true &&b==true 
-	a&&b und
-	a||b oder
-	c==2||c==3
+	a==true &&b==true  
+	a&&b und 
+	a||b oder 
+	c==2||c==3 
 
 
 	*/

@@ -52,6 +52,7 @@ void solve()
 	//von [0,0] 
 	for (int i = 0; i < row1; i++)
 	{
+
 		//bis [8,8]
 		for (int j = 0; j < collumn1; j++)
 		{
@@ -60,7 +61,6 @@ void solve()
 				//für alle möglichen zahlen 1-9
 				for (int n = 1; n < 10; n++)
 				{
-
 					if (Possible(i, j, n))
 					{
 						// ist möglich kann aber falsch sein 
@@ -83,7 +83,6 @@ void solve()
 						{
 							return;
 						}
-
 						SudokuField[i][j] = 0;
 					}
 				}
@@ -138,7 +137,7 @@ bool Possible(int Row, int Collumn, int tryNumber)
 // determinesthe 3x3 Field in wich the field to check is 
 int determineHaus(int Row, int Collumn)
 {
-	// ausgabe 1-9 je nach "Haus" also 3x3 kasten
+	// ausgabe 1-9 je nach "Haus" also 3x3 kasten	
 	// 147
 	if (Row <= 2)
 	{
